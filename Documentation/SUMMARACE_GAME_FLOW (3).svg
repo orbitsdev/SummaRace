@@ -1,0 +1,415 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 3000" font-family="Arial, sans-serif">
+  <rect width="1600" height="3000" fill="#FAFAFA"/>
+
+  <text x="800" y="50" text-anchor="middle" font-size="36" font-weight="500" fill="#042C53">SummaRace — Player Experience</text>
+  <text x="800" y="80" text-anchor="middle" font-size="16" fill="#5F5E5A">Every screen a player will see, in order</text>
+
+  <text x="800" y="125" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">━━━ The Main Journey ━━━</text>
+
+  <g transform="translate(40, 150)">
+    <rect width="340" height="420" rx="16" fill="#E6F1FB" stroke="#185FA5" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#185FA5"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">1</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#042C53">Splash screen</text>
+    <text x="170" y="120" text-anchor="middle" font-size="11" fill="#185FA5">LEARN BY RUNNING</text>
+    <text x="170" y="160" text-anchor="middle" font-size="32" font-weight="500" fill="#042C53">SummaRace</text>
+    <text x="170" y="185" text-anchor="middle" font-size="13" fill="#185FA5">Read. Run. Remember.</text>
+    <circle cx="170" cy="250" r="40" fill="#B5D4F4"/>
+    <text x="170" y="262" text-anchor="middle" font-size="36">📚</text>
+    <rect x="100" y="320" width="140" height="40" rx="8" fill="#042C53"/>
+    <text x="170" y="346" text-anchor="middle" font-size="14" font-weight="500" fill="white">Start</text>
+    <rect x="115" y="370" width="110" height="32" rx="8" fill="white" stroke="#185FA5" stroke-width="1"/>
+    <text x="170" y="391" text-anchor="middle" font-size="12" fill="#042C53">Settings</text>
+  </g>
+
+  <g transform="translate(420, 150)">
+    <rect width="340" height="420" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#534AB7"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">2</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#26215C">Enter name + avatar</text>
+    <text x="170" y="100" text-anchor="middle" font-size="16" font-weight="500" fill="#26215C">What's your name, runner?</text>
+    <rect x="50" y="130" width="240" height="44" rx="8" fill="white" stroke="#534AB7"/>
+    <text x="170" y="158" text-anchor="middle" font-size="14" fill="#7F77DD">Type your name...</text>
+    <text x="170" y="210" text-anchor="middle" font-size="12" fill="#534AB7">Pick your avatar</text>
+    <circle cx="80" cy="260" r="28" fill="#CECBF6"/>
+    <text x="80" y="270" text-anchor="middle" font-size="24">🦊</text>
+    <circle cx="140" cy="260" r="28" fill="#AFA9EC" stroke="#26215C" stroke-width="3"/>
+    <text x="140" y="270" text-anchor="middle" font-size="24">🐻</text>
+    <circle cx="200" cy="260" r="28" fill="#CECBF6"/>
+    <text x="200" y="270" text-anchor="middle" font-size="24">🐰</text>
+    <circle cx="260" cy="260" r="28" fill="#CECBF6"/>
+    <text x="260" y="270" text-anchor="middle" font-size="24">🐼</text>
+    <rect x="100" y="340" width="140" height="40" rx="8" fill="#26215C"/>
+    <text x="170" y="366" text-anchor="middle" font-size="14" font-weight="500" fill="white">Continue</text>
+  </g>
+
+  <g transform="translate(800, 150)">
+    <rect width="340" height="420" rx="16" fill="#E1F5EE" stroke="#1D9E75" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#1D9E75"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">3</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#04342C">Teacher welcome</text>
+    <circle cx="170" cy="140" r="50" fill="#9FE1CB"/>
+    <text x="170" y="160" text-anchor="middle" font-size="56">👩‍🏫</text>
+    <text x="170" y="210" text-anchor="middle" font-size="11" fill="#0F6E56">Ms. Lumi (your guide)</text>
+    <rect x="40" y="240" width="260" height="100" rx="12" fill="white" stroke="#1D9E75"/>
+    <text x="55" y="270" font-size="13" fill="#04342C">"Hi Ben! I'm Ms. Lumi.</text>
+    <text x="55" y="290" font-size="13" fill="#04342C">Today we'll read stories</text>
+    <text x="55" y="310" font-size="13" fill="#04342C">and race to remember</text>
+    <text x="55" y="330" font-size="13" fill="#04342C">them. Ready?"</text>
+    <rect x="80" y="365" width="180" height="36" rx="8" fill="#04342C"/>
+    <text x="170" y="389" text-anchor="middle" font-size="13" fill="white">Tap to continue ▸</text>
+  </g>
+
+  <g transform="translate(1180, 150)">
+    <rect width="380" height="420" rx="16" fill="#FAEEDA" stroke="#BA7517" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#BA7517"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">4</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#412402">Select a story</text>
+    <text x="190" y="80" text-anchor="middle" font-size="16" font-weight="500" fill="#412402">Pick a story</text>
+    <rect x="30" y="100" width="320" height="80" rx="8" fill="white" stroke="#BA7517" stroke-width="3"/>
+    <rect x="50" y="120" width="50" height="50" rx="8" fill="#FAC775"/>
+    <text x="75" y="155" text-anchor="middle" font-size="28">🐶</text>
+    <text x="120" y="140" font-size="14" font-weight="500" fill="#412402">Level 1 — Max the puppy</text>
+    <text x="120" y="160" font-size="11" fill="#854F0B">★☆☆ Easy</text>
+    <rect x="30" y="200" width="320" height="80" rx="8" fill="#FAC775" stroke="#854F0B" opacity="0.6"/>
+    <rect x="50" y="220" width="50" height="50" rx="8" fill="#EF9F27"/>
+    <text x="75" y="255" text-anchor="middle" font-size="28">🔒</text>
+    <text x="120" y="240" font-size="14" font-weight="500" fill="#412402">Level 2 — Locked</text>
+    <text x="120" y="260" font-size="11" fill="#854F0B">★★☆ Medium</text>
+    <rect x="30" y="300" width="320" height="80" rx="8" fill="#FAC775" stroke="#854F0B" opacity="0.6"/>
+    <rect x="50" y="320" width="50" height="50" rx="8" fill="#EF9F27"/>
+    <text x="75" y="355" text-anchor="middle" font-size="28">🔒</text>
+    <text x="120" y="340" font-size="14" font-weight="500" fill="#412402">Level 3 — Locked</text>
+    <text x="120" y="360" font-size="11" fill="#854F0B">★★★ Hard</text>
+  </g>
+
+  <text x="395" y="365" font-size="24" fill="#888780">▸</text>
+  <text x="775" y="365" font-size="24" fill="#888780">▸</text>
+  <text x="1155" y="365" font-size="24" fill="#888780">▸</text>
+
+  <g transform="translate(40, 620)">
+    <rect width="340" height="420" rx="16" fill="#FBEAF0" stroke="#D4537E" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#D4537E"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">5</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#4B1528">Reading the story</text>
+    <text x="40" y="80" font-size="11" fill="#72243E">Page 1 of 5</text>
+    <circle cx="280" cy="76" r="12" fill="white"/>
+    <text x="280" y="82" text-anchor="middle" font-size="12">🔊</text>
+    <circle cx="310" cy="76" r="12" fill="white"/>
+    <text x="310" y="82" text-anchor="middle" font-size="12">⏸</text>
+    <rect x="30" y="100" width="280" height="240" rx="8" fill="white" stroke="#D4537E"/>
+    <rect x="50" y="120" width="240" height="100" rx="8" fill="#F4C0D1"/>
+    <text x="170" y="180" text-anchor="middle" font-size="48">🐶🏞️</text>
+    <text x="50" y="245" font-size="12" fill="#4B1528">Max the puppy lived in a small</text>
+    <text x="50" y="265" font-size="12" fill="#4B1528">house by the park. One sunny</text>
+    <text x="50" y="285" font-size="12" fill="#4B1528">day, he wandered too far and</text>
+    <text x="50" y="305" font-size="12" fill="#4B1528">got lost...</text>
+    <rect x="30" y="360" width="80" height="36" rx="8" fill="white" stroke="#D4537E"/>
+    <text x="70" y="383" text-anchor="middle" font-size="12" fill="#72243E">◂ Back</text>
+    <rect x="220" y="360" width="90" height="36" rx="8" fill="#4B1528"/>
+    <text x="265" y="383" text-anchor="middle" font-size="12" fill="white">Next ▸</text>
+  </g>
+
+  <g transform="translate(420, 620)">
+    <rect width="340" height="420" rx="16" fill="#FAECE7" stroke="#D85A30" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#D85A30"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">6</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#4A1B0C">Question after each page</text>
+    <text x="170" y="100" text-anchor="middle" font-size="11" fill="#993C1D">QUICK CHECK</text>
+    <text x="170" y="140" text-anchor="middle" font-size="18" font-weight="500" fill="#4A1B0C">Who is the main</text>
+    <text x="170" y="165" text-anchor="middle" font-size="18" font-weight="500" fill="#4A1B0C">character?</text>
+    <rect x="50" y="200" width="240" height="44" rx="8" fill="white" stroke="#D85A30"/>
+    <text x="170" y="227" text-anchor="middle" font-size="13" fill="#4A1B0C">A) Max the puppy</text>
+    <rect x="50" y="254" width="240" height="44" rx="8" fill="white" stroke="#D85A30"/>
+    <text x="170" y="281" text-anchor="middle" font-size="13" fill="#4A1B0C">B) The mailman</text>
+    <rect x="50" y="308" width="240" height="44" rx="8" fill="white" stroke="#D85A30"/>
+    <text x="170" y="335" text-anchor="middle" font-size="13" fill="#4A1B0C">C) A stray cat</text>
+    <text x="170" y="385" text-anchor="middle" font-size="10" fill="#993C1D">Always proceed — score is tracked</text>
+  </g>
+
+  <g transform="translate(800, 620)">
+    <rect width="340" height="420" rx="16" fill="#E1F5EE" stroke="#1D9E75" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#1D9E75"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">7</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#04342C">Mission intro</text>
+    <circle cx="170" cy="120" r="40" fill="#9FE1CB"/>
+    <text x="170" y="138" text-anchor="middle" font-size="44">👩‍🏫</text>
+    <rect x="30" y="190" width="280" height="120" rx="12" fill="white" stroke="#1D9E75"/>
+    <text x="50" y="220" font-size="13" fill="#04342C">"Now run through the snow</text>
+    <text x="50" y="240" font-size="13" fill="#04342C">and collect the 5 story parts.</text>
+    <text x="50" y="260" font-size="13" fill="#04342C">Watch out — the Snow Patrol</text>
+    <text x="50" y="280" font-size="13" fill="#04342C">is coming!"</text>
+    <rect x="100" y="295" width="60" height="20" rx="10" fill="#E1F5EE"/>
+    <text x="130" y="310" text-anchor="middle" font-size="10" fill="#04342C">⏱ 60s</text>
+    <rect x="170" y="295" width="80" height="20" rx="10" fill="#E1F5EE"/>
+    <text x="210" y="310" text-anchor="middle" font-size="10" fill="#04342C">5 elements</text>
+    <rect x="80" y="350" width="180" height="44" rx="8" fill="#04342C"/>
+    <text x="170" y="378" text-anchor="middle" font-size="14" font-weight="500" fill="white">Start mission!</text>
+  </g>
+
+  <g transform="translate(1180, 620)">
+    <rect width="380" height="420" rx="16" fill="#042C53" stroke="#185FA5" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#185FA5"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">8</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="white">The 3D run (gameplay)</text>
+    <rect x="30" y="60" width="80" height="26" rx="13" fill="#185FA5"/>
+    <text x="70" y="78" text-anchor="middle" font-size="12" fill="white">⏱ 0:42</text>
+    <rect x="270" y="60" width="80" height="26" rx="13" fill="#185FA5"/>
+    <text x="310" y="78" text-anchor="middle" font-size="12" fill="white">⭐ 120</text>
+    <rect x="30" y="100" width="320" height="48" rx="6" fill="#0C447C"/>
+    <text x="190" y="118" text-anchor="middle" font-size="9" fill="#B5D4F4">COLLECTED</text>
+    <rect x="80" y="124" width="22" height="20" rx="3" fill="#1D9E75"/>
+    <text x="91" y="139" text-anchor="middle" font-size="11">🐶</text>
+    <rect x="110" y="124" width="22" height="20" rx="3" fill="#1D9E75"/>
+    <text x="121" y="139" text-anchor="middle" font-size="11">🏠</text>
+    <rect x="140" y="124" width="22" height="20" rx="3" fill="#185FA5"/>
+    <text x="151" y="139" text-anchor="middle" font-size="11" fill="#B5D4F4">?</text>
+    <rect x="170" y="124" width="22" height="20" rx="3" fill="#185FA5"/>
+    <text x="181" y="139" text-anchor="middle" font-size="11" fill="#B5D4F4">?</text>
+    <rect x="200" y="124" width="22" height="20" rx="3" fill="#185FA5"/>
+    <text x="211" y="139" text-anchor="middle" font-size="11" fill="#B5D4F4">?</text>
+    <rect x="30" y="160" width="320" height="32" rx="6" fill="#BA7517"/>
+    <text x="190" y="181" text-anchor="middle" font-size="13" font-weight="500" fill="white">⚠ BUT — what was the problem?</text>
+    <rect x="30" y="205" width="320" height="160" rx="6" fill="#B5D4F4"/>
+    <rect x="55" y="220" width="80" height="60" rx="6" fill="white" stroke="#185FA5"/>
+    <text x="95" y="245" text-anchor="middle" font-size="20">👫</text>
+    <text x="95" y="270" text-anchor="middle" font-size="9" fill="#042C53">Met a friend</text>
+    <rect x="150" y="220" width="80" height="60" rx="6" fill="#C0DD97" stroke="#3B6D11" stroke-width="3"/>
+    <text x="190" y="245" text-anchor="middle" font-size="20">🌲</text>
+    <text x="190" y="270" text-anchor="middle" font-size="9" font-weight="500" fill="#173404">Got lost</text>
+    <rect x="245" y="220" width="80" height="60" rx="6" fill="white" stroke="#185FA5"/>
+    <text x="285" y="245" text-anchor="middle" font-size="20">😴</text>
+    <text x="285" y="270" text-anchor="middle" font-size="9" fill="#042C53">Fell asleep</text>
+    <text x="190" y="335" text-anchor="middle" font-size="32">🏃‍♂️</text>
+    <text x="190" y="355" text-anchor="middle" font-size="9" fill="#042C53">YOU</text>
+    <rect x="260" y="215" width="85" height="20" rx="4" fill="#4A1B0C"/>
+    <text x="302" y="230" text-anchor="middle" font-size="9" fill="white">❄ Patrol: 18m</text>
+    <rect x="120" y="380" width="30" height="26" rx="4" fill="#185FA5"/>
+    <text x="135" y="398" text-anchor="middle" font-size="14" fill="white">◂</text>
+    <rect x="155" y="380" width="30" height="26" rx="4" fill="#185FA5"/>
+    <text x="170" y="398" text-anchor="middle" font-size="14" fill="white">▴</text>
+    <rect x="190" y="380" width="30" height="26" rx="4" fill="#185FA5"/>
+    <text x="205" y="398" text-anchor="middle" font-size="14" fill="white">▸</text>
+  </g>
+
+  <text x="395" y="835" font-size="24" fill="#888780">▸</text>
+  <text x="775" y="835" font-size="24" fill="#888780">▸</text>
+  <text x="1155" y="835" font-size="24" fill="#888780">▸</text>
+
+  <g transform="translate(40, 1090)">
+    <rect width="340" height="460" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#534AB7"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">9</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#26215C">Final summary task</text>
+    <text x="170" y="80" text-anchor="middle" font-size="11" fill="#534AB7">FINAL TASK ⏱ 0:24</text>
+    <text x="170" y="110" text-anchor="middle" font-size="16" font-weight="500" fill="#26215C">Write your summary</text>
+    <rect x="30" y="130" width="280" height="180" rx="8" fill="white" stroke="#7F77DD"/>
+    <text x="50" y="155" font-size="11" fill="#7F77DD">Somebody:</text>
+    <rect x="130" y="142" width="160" height="20" rx="4" fill="#E1F5EE"/>
+    <text x="135" y="156" font-size="11" fill="#04342C">Max the puppy ✓</text>
+    <text x="50" y="185" font-size="11" fill="#7F77DD">Wanted:</text>
+    <rect x="130" y="172" width="160" height="20" rx="4" fill="#E1F5EE"/>
+    <text x="135" y="186" font-size="11" fill="#04342C">to find his way home ✓</text>
+    <text x="50" y="215" font-size="11" fill="#7F77DD">But:</text>
+    <rect x="130" y="202" width="160" height="20" rx="4" fill="#FCEBEB"/>
+    <text x="135" y="216" font-size="11" fill="#501313">he met a friend ✗ tap fix</text>
+    <text x="50" y="245" font-size="11" fill="#7F77DD">So:</text>
+    <rect x="130" y="232" width="160" height="20" rx="4" fill="#E1F5EE"/>
+    <text x="135" y="246" font-size="11" fill="#04342C">he followed smells ✓</text>
+    <text x="50" y="275" font-size="11" fill="#7F77DD">Then:</text>
+    <rect x="130" y="262" width="160" height="20" rx="4" fill="#E1F5EE"/>
+    <text x="135" y="276" font-size="11" fill="#04342C">his owner found him ✓</text>
+    <text x="50" y="335" font-size="10" fill="#534AB7">Your summary:</text>
+    <rect x="30" y="345" width="280" height="60" rx="8" fill="white" stroke="#7F77DD"/>
+    <text x="50" y="370" font-size="11" fill="#534AB7">Max the puppy wanted to find</text>
+    <text x="50" y="390" font-size="11" fill="#534AB7">his way home...</text>
+    <rect x="100" y="415" width="140" height="36" rx="8" fill="#26215C"/>
+    <text x="170" y="438" text-anchor="middle" font-size="13" font-weight="500" fill="white">Submit</text>
+  </g>
+
+  <g transform="translate(420, 1090)">
+    <rect width="340" height="460" rx="16" fill="#EAF3DE" stroke="#639922" stroke-width="2"/>
+    <circle cx="30" cy="30" r="18" fill="#639922"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">10</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#173404">Victory &amp; level up</text>
+    <text x="170" y="90" text-anchor="middle" font-size="11" fill="#3B6D11">LEVEL 1 COMPLETE</text>
+    <text x="170" y="130" text-anchor="middle" font-size="26" font-weight="500" fill="#173404">You did it!</text>
+    <text x="120" y="190" text-anchor="middle" font-size="40">⭐</text>
+    <text x="170" y="190" text-anchor="middle" font-size="40">⭐</text>
+    <text x="220" y="190" text-anchor="middle" font-size="40">⭐</text>
+    <circle cx="170" cy="260" r="40" fill="#C0DD97"/>
+    <text x="170" y="278" text-anchor="middle" font-size="44">👩‍🏫</text>
+    <rect x="40" y="320" width="260" height="60" rx="12" fill="white" stroke="#639922"/>
+    <text x="170" y="345" text-anchor="middle" font-size="12" fill="#173404">"Amazing, Ben!</text>
+    <text x="170" y="365" text-anchor="middle" font-size="12" fill="#173404">Level 2 is now unlocked!"</text>
+    <rect x="80" y="400" width="180" height="40" rx="8" fill="#173404"/>
+    <text x="170" y="426" text-anchor="middle" font-size="13" font-weight="500" fill="white">Next level ▸</text>
+  </g>
+
+  <text x="800" y="1620" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">━━━ What Happens During the Run ━━━</text>
+
+  <g transform="translate(40, 1660)">
+    <rect width="500" height="380" rx="16" fill="#042C53" stroke="#1D9E75" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#1D9E75"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">A</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="white">When player picks RIGHT</text>
+    <rect x="30" y="60" width="80" height="22" rx="11" fill="#185FA5"/>
+    <text x="70" y="76" text-anchor="middle" font-size="11" fill="white">⏱ 0:38</text>
+    <rect x="390" y="60" width="80" height="22" rx="11" fill="#185FA5"/>
+    <text x="430" y="76" text-anchor="middle" font-size="11" fill="white">⭐ 145</text>
+    <rect x="30" y="92" width="440" height="32" rx="6" fill="#1D9E75"/>
+    <text x="250" y="113" text-anchor="middle" font-size="14" font-weight="500" fill="white">✓ Correct! Sprint boost!</text>
+    <rect x="30" y="135" width="440" height="180" rx="6" fill="#B5D4F4"/>
+    <rect x="370" y="145" width="100" height="22" rx="4" fill="#0F6E56"/>
+    <text x="420" y="160" text-anchor="middle" font-size="10" fill="white">❄ Patrol: 28m ↑ FAR</text>
+    <text x="250" y="220" text-anchor="middle" font-size="42">💨🏃‍♂️💨</text>
+    <text x="250" y="250" text-anchor="middle" font-size="13" fill="#042C53">Sprinting fast!</text>
+    <rect x="150" y="280" width="200" height="22" rx="4" fill="#C0DD97" stroke="#3B6D11"/>
+    <text x="250" y="295" text-anchor="middle" font-size="11" fill="#173404" font-weight="500">+ Got lost ✓ collected</text>
+    <text x="250" y="345" text-anchor="middle" font-size="13" fill="#9FE1CB">Patrol moves farther away — you're safer!</text>
+  </g>
+
+  <g transform="translate(560, 1660)">
+    <rect width="500" height="380" rx="16" fill="#042C53" stroke="#A32D2D" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#A32D2D"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">B</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="white">When player picks WRONG</text>
+    <rect x="30" y="60" width="80" height="22" rx="11" fill="#185FA5"/>
+    <text x="70" y="76" text-anchor="middle" font-size="11" fill="white">⏱ 0:35</text>
+    <rect x="390" y="60" width="80" height="22" rx="11" fill="#185FA5"/>
+    <text x="430" y="76" text-anchor="middle" font-size="11" fill="white">⭐ 145</text>
+    <rect x="30" y="92" width="440" height="32" rx="6" fill="#A32D2D"/>
+    <text x="250" y="113" text-anchor="middle" font-size="14" font-weight="500" fill="white">✗ Oops! Slow down!</text>
+    <rect x="30" y="135" width="440" height="180" rx="6" fill="#993C1D"/>
+    <rect x="30" y="135" width="440" height="60" fill="#4A1B0C"/>
+    <rect x="370" y="145" width="100" height="22" rx="4" fill="#791F1F"/>
+    <text x="420" y="160" text-anchor="middle" font-size="10" fill="white">❄ Patrol: 8m ↓ DANGER</text>
+    <text x="250" y="180" text-anchor="middle" font-size="26">🧊 ❄ 🧊</text>
+    <text x="250" y="220" text-anchor="middle" font-size="13" fill="white">Patrol closing in!</text>
+    <text x="250" y="265" text-anchor="middle" font-size="34">🚶‍♂️</text>
+    <text x="250" y="285" text-anchor="middle" font-size="11" fill="white">Slowed down</text>
+    <rect x="120" y="295" width="260" height="22" rx="4" fill="#F7C1C1" stroke="#A32D2D"/>
+    <text x="250" y="310" text-anchor="middle" font-size="11" fill="#501313" font-weight="500">+ Met a friend ✗ (you'll fix this later)</text>
+    <text x="250" y="345" text-anchor="middle" font-size="13" fill="#F7C1C1">Wrong answer added in red — but keep running!</text>
+  </g>
+
+  <g transform="translate(1080, 1660)">
+    <rect width="480" height="380" rx="16" fill="#501313" stroke="#A32D2D" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#A32D2D"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">C</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="white">If too many wrong → CAUGHT</text>
+    <text x="180" y="100" font-size="44">🧊</text>
+    <text x="230" y="100" font-size="40">😨</text>
+    <text x="285" y="100" font-size="44">🧊</text>
+    <text x="240" y="135" text-anchor="middle" font-size="12" fill="#F7C1C1">CAUGHT BY PATROL!</text>
+    <text x="240" y="170" text-anchor="middle" font-size="22" font-weight="500" fill="white">The patrol got you!</text>
+    <rect x="60" y="195" width="360" height="60" rx="8" fill="white"/>
+    <text x="240" y="220" text-anchor="middle" font-size="13" fill="#501313">Don't worry! Try again —</text>
+    <text x="240" y="240" text-anchor="middle" font-size="13" fill="#501313">you remember the story!</text>
+    <rect x="120" y="275" width="240" height="40" rx="8" fill="white"/>
+    <text x="240" y="300" text-anchor="middle" font-size="14" font-weight="500" fill="#501313">↻ Retry mission</text>
+    <rect x="135" y="325" width="210" height="32" rx="8" fill="transparent" stroke="#F7C1C1"/>
+    <text x="240" y="345" text-anchor="middle" font-size="11" fill="#F7C1C1">📖 Re-read story first</text>
+  </g>
+
+  <text x="800" y="2090" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">━━━ Fixing Wrong Answers at the Finish Line ━━━</text>
+
+  <g transform="translate(40, 2130)">
+    <rect width="500" height="400" rx="16" fill="#FAEEDA" stroke="#BA7517" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#BA7517"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">D</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#412402">Fix wrong answer popup</text>
+    <text x="250" y="80" text-anchor="middle" font-size="11" fill="#BA7517">⏱ 18 SECONDS LEFT</text>
+    <text x="250" y="110" text-anchor="middle" font-size="16" font-weight="500" fill="#412402">BUT — what was the problem?</text>
+    <rect x="40" y="130" width="420" height="48" rx="8" fill="#FCEBEB" stroke="#A32D2D" stroke-width="2"/>
+    <text x="60" y="158" font-size="20">👫</text>
+    <text x="95" y="160" font-size="13" fill="#501313">He met a friend</text>
+    <text x="445" y="160" text-anchor="end" font-size="11" fill="#A32D2D">your pick ✗</text>
+    <rect x="40" y="190" width="420" height="48" rx="8" fill="white" stroke="#BA7517"/>
+    <text x="60" y="218" font-size="20">🌲</text>
+    <text x="95" y="220" font-size="13" fill="#412402">He got lost in the woods</text>
+    <rect x="40" y="250" width="420" height="48" rx="8" fill="white" stroke="#BA7517"/>
+    <text x="60" y="278" font-size="20">😴</text>
+    <text x="95" y="280" font-size="13" fill="#412402">He fell asleep</text>
+    <text x="250" y="325" text-anchor="middle" font-size="12" fill="#854F0B">Tap the correct answer to fix it</text>
+    <rect x="40" y="345" width="420" height="40" rx="8" fill="#412402"/>
+    <text x="250" y="370" text-anchor="middle" font-size="14" font-weight="500" fill="white">Confirm fix</text>
+  </g>
+
+  <g transform="translate(560, 2130)">
+    <rect width="500" height="400" rx="16" fill="#EAF3DE" stroke="#639922" stroke-width="3"/>
+    <circle cx="30" cy="30" r="18" fill="#639922"/>
+    <text x="30" y="36" text-anchor="middle" font-size="16" font-weight="500" fill="white">E</text>
+    <text x="60" y="36" font-size="16" font-weight="500" fill="#173404">All elements correct!</text>
+    <circle cx="250" cy="140" r="50" fill="#C0DD97"/>
+    <text x="250" y="160" text-anchor="middle" font-size="48">✓</text>
+    <text x="250" y="220" text-anchor="middle" font-size="20" font-weight="500" fill="#173404">All elements correct!</text>
+    <rect x="60" y="245" width="380" height="40" rx="8" fill="white"/>
+    <text x="250" y="270" text-anchor="middle" font-size="12" fill="#173404">Now type your summary below ↓</text>
+    <rect x="80" y="305" width="60" height="28" rx="4" fill="#1D9E75"/>
+    <text x="110" y="324" text-anchor="middle" font-size="13" fill="white">🐶 ✓</text>
+    <rect x="148" y="305" width="60" height="28" rx="4" fill="#1D9E75"/>
+    <text x="178" y="324" text-anchor="middle" font-size="13" fill="white">🏠 ✓</text>
+    <rect x="216" y="305" width="60" height="28" rx="4" fill="#1D9E75"/>
+    <text x="246" y="324" text-anchor="middle" font-size="13" fill="white">🌲 ✓</text>
+    <rect x="284" y="305" width="60" height="28" rx="4" fill="#1D9E75"/>
+    <text x="314" y="324" text-anchor="middle" font-size="13" fill="white">👃 ✓</text>
+    <rect x="352" y="305" width="60" height="28" rx="4" fill="#1D9E75"/>
+    <text x="382" y="324" text-anchor="middle" font-size="13" fill="white">🤗 ✓</text>
+    <text x="250" y="370" text-anchor="middle" font-size="12" fill="#3B6D11">Continues to typing the full sentence →</text>
+  </g>
+
+  <text x="800" y="2580" text-anchor="middle" font-size="14" font-weight="500" fill="#444441">━━━ The 3 Stories ━━━</text>
+
+  <g transform="translate(40, 2620)">
+    <rect width="500" height="350" rx="16" fill="#FAEEDA" stroke="#BA7517" stroke-width="2"/>
+    <text x="20" y="35" font-size="14" fill="#854F0B">LEVEL 1 — EASY</text>
+    <text x="20" y="65" font-size="22" font-weight="500" fill="#412402">Max the Lost Puppy</text>
+    <text x="20" y="90" font-size="12" fill="#854F0B">A puppy gets lost and finds his way home</text>
+    <text x="20" y="130" font-size="13" font-weight="500" fill="#412402">Story elements:</text>
+    <text x="20" y="155" font-size="12" fill="#412402">SOMEBODY: Max the puppy 🐶</text>
+    <text x="20" y="180" font-size="12" fill="#412402">WANTED: To find his way home 🏠</text>
+    <text x="20" y="205" font-size="12" fill="#412402">BUT: Got lost in the woods 🌲</text>
+    <text x="20" y="230" font-size="12" fill="#412402">SO: Followed familiar smells 👃</text>
+    <text x="20" y="255" font-size="12" fill="#412402">THEN: Lily found and hugged him 🤗</text>
+    <rect x="20" y="275" width="460" height="60" rx="8" fill="white" stroke="#BA7517"/>
+    <text x="30" y="295" font-size="10" fill="#412402">"Max the puppy wanted to find his way home, but he got lost</text>
+    <text x="30" y="312" font-size="10" fill="#412402">in the woods, so he followed familiar smells, and then Lily</text>
+    <text x="30" y="328" font-size="10" fill="#412402">found him and hugged him."</text>
+  </g>
+
+  <g transform="translate(560, 2620)">
+    <rect width="500" height="350" rx="16" fill="#FBEAF0" stroke="#D4537E" stroke-width="2"/>
+    <text x="20" y="35" font-size="14" fill="#993556">LEVEL 2 — MEDIUM</text>
+    <text x="20" y="65" font-size="22" font-weight="500" fill="#4B1528">Luna and the Broken Kite</text>
+    <text x="20" y="90" font-size="12" fill="#993556">A girl's kite breaks and a friend helps fix it</text>
+    <text x="20" y="130" font-size="13" font-weight="500" fill="#4B1528">Story elements:</text>
+    <text x="20" y="155" font-size="12" fill="#4B1528">SOMEBODY: Luna 👧</text>
+    <text x="20" y="180" font-size="12" fill="#4B1528">WANTED: To fly her red kite 🪁</text>
+    <text x="20" y="205" font-size="12" fill="#4B1528">BUT: The wind broke her kite 💨</text>
+    <text x="20" y="230" font-size="12" fill="#4B1528">SO: Ravi helped fix it 🛠️</text>
+    <text x="20" y="255" font-size="12" fill="#4B1528">THEN: Kite flew higher than ever 🪁⬆️</text>
+    <rect x="20" y="275" width="460" height="60" rx="8" fill="white" stroke="#D4537E"/>
+    <text x="30" y="295" font-size="10" fill="#4B1528">"Luna wanted to fly her red kite, but the wind broke her kite,</text>
+    <text x="30" y="312" font-size="10" fill="#4B1528">so Ravi helped her fix it with tape and paper, and then the</text>
+    <text x="30" y="328" font-size="10" fill="#4B1528">kite flew higher than ever."</text>
+  </g>
+
+  <g transform="translate(1080, 2620)">
+    <rect width="480" height="350" rx="16" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+    <text x="20" y="35" font-size="14" fill="#3C3489">LEVEL 3 — HARD</text>
+    <text x="20" y="65" font-size="22" font-weight="500" fill="#26215C">The Brave Little Turtle</text>
+    <text x="20" y="90" font-size="12" fill="#3C3489">A small turtle wins a race against bigger animals</text>
+    <text x="20" y="130" font-size="13" font-weight="500" fill="#26215C">Story elements:</text>
+    <text x="20" y="155" font-size="12" fill="#26215C">SOMEBODY: Tito the turtle 🐢</text>
+    <text x="20" y="180" font-size="12" fill="#26215C">WANTED: Win the Forest Race 🏆</text>
+    <text x="20" y="205" font-size="12" fill="#26215C">BUT: Others were faster 😤</text>
+    <text x="20" y="230" font-size="12" fill="#26215C">SO: Kept walking, never gave up 🚶</text>
+    <text x="20" y="255" font-size="12" fill="#26215C">THEN: Crossed finish line first 🥇</text>
+    <rect x="20" y="275" width="440" height="60" rx="8" fill="white" stroke="#534AB7"/>
+    <text x="30" y="295" font-size="10" fill="#26215C">"Tito the turtle wanted to win the Forest Race, but the other</text>
+    <text x="30" y="312" font-size="10" fill="#26215C">animals were faster, so he kept walking and never gave up,</text>
+    <text x="30" y="328" font-size="10" fill="#26215C">and then he crossed the finish line first."</text>
+  </g>
+
+</svg>
