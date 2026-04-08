@@ -30,7 +30,12 @@ Rules and patterns to prevent repeated mistakes.
 
 ## Code Quality
 
-_Add code quality lessons here_
+### Data Persistence (Unity vs Backend)
+- **No database needed** for simple offline games
+- **PlayerPrefs** = like SharedPreferences (key-value storage)
+- **JSON files** = for complex nested data
+- **SQLite** = overkill unless thousands of records
+- SummaRace uses PlayerPrefs (~10 key-value pairs)
 
 ---
 
