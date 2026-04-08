@@ -4,6 +4,37 @@
 
 ---
 
+## ✅ IMPORTED ASSETS (Current Project Status)
+
+All assets are organized in `Assets/Plugins/`:
+
+| Asset | Folder | Purpose | Status |
+|-------|--------|---------|--------|
+| **RPG Tiny Hero Duo** | `Plugins/RPG Tiny Hero Duo/` | Player character (3D) | ✅ Imported |
+| **RPG Monster Buddy** | `Plugins/RPGMonsterBuddiesPBRPA/` | Snow Patrol enemy (3D) | ✅ Imported |
+| **Easy Chara Hisa Teacher** | `Plugins/Easy Chara/` | Ms. Lumi teacher (2D) | ✅ Imported |
+| **Low Poly Trees Pack Lite** | `Plugins/Trees Package Lite/` | Trees with snowy variants | ✅ Imported |
+| **Kenney Nature Kit** | `Plugins/Kenney Nature Kit/` | Ground, environment | ✅ Imported |
+| **Simple Cartoon UI** | `Plugins/Cartoon UI/` | Buttons, panels, icons | ✅ Imported |
+| **Skybox Cubemap Extended** | `Plugins/BOXOPHOBIC/` | Sky shader | ✅ Imported |
+
+### Key Prefabs to Use:
+- **Player:** `Plugins/RPG Tiny Hero Duo/Prefab/MaleCharacterPBR.prefab`
+- **Enemy:** `Plugins/RPGMonsterBuddiesPBRPA/Prefab/MushroomAngryPBR.prefab`
+- **Teacher:** `Plugins/Easy Chara/Characters/Hisa Teacher/Hisa Teacher.prefab`
+- **Snowy Trees:** `Plugins/Trees Package Lite/Prefabs/pine_tree_1_snowy.prefab`
+
+### Still Needed (Optional/Later):
+| Asset | Priority | Notes |
+|-------|----------|-------|
+| SFX (sounds) | Medium | Dustyroom pack or Pixabay |
+| Background Music | Medium | Pixabay free music |
+| Fonts | Low | Google Fonts (Fredoka + Patrick Hand) |
+| Story Illustrations | Medium | AI-generated (15 images) |
+| Element Icons | Medium | Flaticon or Game-icons.net (45 icons) |
+
+---
+
 ## 🎯 Quick Reference — License Symbols
 
 | Symbol | Meaning |
