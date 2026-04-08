@@ -49,12 +49,14 @@ For repetitive Unity tasks (creating scenes, folders, GameObjects, prefabs), **g
 ### 2. Subagent Strategy
 - Use subagents liberally to keep main context window clean
 - Offload research, exploration, and parallel analysis to subagents
+- For complex problems, throw more compute at it via subagents
 - One task per subagent for focused execution
 
 ### 3. Self-Improvement Loop
 - After ANY correction from the user: update `tasks/lessons.md` with the pattern
 - Write rules for yourself that prevent the same mistake
-- Review lessons at session start
+- Ruthlessly iterate on these lessons until mistake rate drops
+- Review lessons at session start for relevant project
 
 ### 4. Verification Before Done
 - Never mark a task complete without proving it works
@@ -63,11 +65,14 @@ For repetitive Unity tasks (creating scenes, folders, GameObjects, prefabs), **g
 
 ### 5. Demand Elegance (Balanced)
 - For non-trivial changes: pause and ask "is there a more elegant way?"
+- If a fix feels hacky: "Knowing everything I know now, implement the elegant solution"
 - Skip this for simple, obvious fixes – don't over-engineer
+- Challenge your own work before presenting it
 
 ### 6. Autonomous Bug Fixing
 - When given a bug report: just fix it. Don't ask for hand-holding
 - Point at logs, errors, failing tests – then resolve them
+- Zero context switching required from the user
 
 ---
 

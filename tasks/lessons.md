@@ -42,3 +42,18 @@ Rules and patterns to prevent repeated mistakes.
 ## Performance
 
 _Add performance lessons here_
+
+---
+
+## Before Manual Work, Check for Unity Tools
+
+### Always Search First
+- **Lesson**: Before implementing features manually, check for free Unity packages
+- **Pattern**: Unity has many free tools that save dev time
+- **Free essentials**:
+  - `com.unity.cinemachine` - Camera shake, follow, transitions (FREE)
+  - `com.unity.inputsystem` - Modern input handling (FREE, already installed)
+  - `com.unity.textmeshpro` - Better text rendering (FREE, often bundled)
+  - `com.unity.2d.animation` - 2D skeletal animation (FREE, already installed)
+  - DOTween - Tweening library (FREE on Asset Store)
+- **Ask Claude**: "Is there a free Unity package for [feature]?" before coding from scratch
