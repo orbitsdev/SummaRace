@@ -36,18 +36,6 @@ namespace SummaRace.Player
         {
             if (Keyboard.current == null) return;
 
-            // W = Start running / Sprint
-            if (Keyboard.current.wKey.wasPressedThisFrame)
-            {
-                _playerController?.StartRunning();
-            }
-
-            // S = Stop running
-            if (Keyboard.current.sKey.wasPressedThisFrame)
-            {
-                _playerController?.StopRunning();
-            }
-
             // A = Move left lane
             if (Keyboard.current.leftArrowKey.wasPressedThisFrame ||
                 Keyboard.current.aKey.wasPressedThisFrame)
@@ -60,17 +48,6 @@ namespace SummaRace.Player
                 Keyboard.current.dKey.wasPressedThisFrame)
             {
                 _laneSwitcher.MoveRight();
-            }
-
-            // Sprint with Shift or Space (while running)
-            if (Keyboard.current.shiftKey.isPressed ||
-                Keyboard.current.spaceKey.isPressed)
-            {
-                _playerController?.Sprint();
-            }
-            else
-            {
-                _playerController?.ResetSpeed();
             }
         }
 

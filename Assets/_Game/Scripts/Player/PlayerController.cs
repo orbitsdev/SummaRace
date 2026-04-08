@@ -24,7 +24,7 @@ namespace SummaRace.Player
         public bool IsRunning => _isRunning;
 
                 [Header("Debug")]
-        [SerializeField] private bool _autoStartForTesting = false;
+        [SerializeField] private bool _autoStartForTesting = true;
 
         void Start()
         {
