@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using SummaRace.Core;
 
 namespace SummaRace.Mission
@@ -16,7 +17,10 @@ namespace SummaRace.Mission
         [SerializeField] private Renderer _cardRenderer;
         [SerializeField] private Color _correctColor = Color.green;
         [SerializeField] private Color _wrongColor = Color.red;
-        [SerializeField] private bool _showColorHint = false; // For debugging
+        [SerializeField] private bool _showColorHint = true;
+
+        [Header("Text Display")]
+        [SerializeField] private TextMeshPro _textDisplay;
 
         public bool IsCorrect => _isCorrect;
         public string AnswerText => _answerText;
@@ -25,10 +29,21 @@ namespace SummaRace.Mission
         {
             base.Start();
             _collectibleType = _isCorrect ? "CorrectAnswer" : "WrongAnswer";
+            ApplyVisuals();
+        }
 
+        private void ApplyVisuals()
+        {
+            // Apply color
             if (_showColorHint && _cardRenderer != null)
             {
                 _cardRenderer.material.color = _isCorrect ? _correctColor : _wrongColor;
+            }
+
+            // Apply text
+            if (_textDisplay != null)
+            {
+                _textDisplay.text = _answerText;
             }
         }
 
@@ -60,6 +75,7 @@ namespace SummaRace.Mission
             _answerText = text;
             _isCorrect = isCorrect;
             _collectibleType = isCorrect ? "CorrectAnswer" : "WrongAnswer";
+            ApplyVisuals();
         }
     }
 }
