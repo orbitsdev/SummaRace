@@ -30,6 +30,9 @@ namespace SummaRace.Mission
         [Header("Player Reference")]
         [SerializeField] private Transform _player;
 
+        [Header("Debug")]
+        [SerializeField] private bool _autoStartForTesting = true;
+
         private float _timeSinceLastIncrease;
         private bool _isActive;
 
@@ -72,6 +75,12 @@ namespace SummaRace.Mission
                 EventBus.Instance.OnAnswerCardCollected += OnAnswerCollected;
                 EventBus.Instance.OnMissionStart += StartDanger;
                 EventBus.Instance.OnMissionEnd += StopDanger;
+            }
+
+            // Auto-start for testing (disable in production)
+            if (_autoStartForTesting)
+            {
+                StartDanger();
             }
         }
 
@@ -168,6 +177,16 @@ namespace SummaRace.Mission
         private void OnPlayerCaught()
         {
             _isActive = false;
+
+            // Move SnowPatrol in front of player so it's visible
+            if (_enemy != null && _player != null)
+            {
+                Vector3 catchPosition = _player.position + _player.forward * 3f;
+                catchPosition.y = _enemy.position.y;
+                _enemy.position = catchPosition;
+                _enemy.LookAt(_player); // Face the player
+            }
+
             EventBus.Instance?.TriggerPlayerCaught();
             Debug.Log("[DangerLevel] Player caught!");
         }

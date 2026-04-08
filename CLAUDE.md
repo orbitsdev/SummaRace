@@ -29,6 +29,7 @@ For repetitive Unity tasks (creating scenes, folders, GameObjects, prefabs), **g
 - Renaming assets
 - Simple drag-and-drop operations
 - Import settings
+- **Updating Inspector values** - Tell user what field to change and to what value
 
 **Use MCP tools for:**
 - Writing/updating C# scripts
