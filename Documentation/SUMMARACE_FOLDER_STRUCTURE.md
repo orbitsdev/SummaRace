@@ -79,7 +79,14 @@ SummaRace/                                  ← Unity project root
 │   │   ├── Prefabs/                        ← Reusable game objects
 │   │   │   ├── Player/
 │   │   │   │   ├── PlayerCharacter.prefab
-│   │   │   │   └── PlayerCamera.prefab
+│   │   │   │   ├── PlayerCamera.prefab
+│   │   │   │   └── Avatars/              ← 4 swappable avatar skins
+│   │   │   │       ├── AvatarFox.prefab
+│   │   │   │       ├── AvatarBear.prefab
+│   │   │   │       ├── AvatarRabbit.prefab
+│   │   │   │       └── AvatarPanda.prefab
+│   │   │   ├── Characters/               ← Reusable characters across scenes
+│   │   │   │   └── Teacher.prefab        ← Ms. Lumi (used in 3+ scenes)
 │   │   │   ├── Mission/
 │   │   │   │   ├── TrackSegment.prefab
 │   │   │   │   ├── Checkpoint.prefab
@@ -87,6 +94,11 @@ SummaRace/                                  ← Unity project root
 │   │   │   │   ├── SnowPatrol.prefab
 │   │   │   │   └── Obstacle.prefab
 │   │   │   ├── UI/
+│   │   │   │   ├── Common/               ← Shared UI components
+│   │   │   │   │   ├── ButtonPrimary.prefab
+│   │   │   │   │   ├── ButtonSecondary.prefab
+│   │   │   │   │   ├── DialogPanel.prefab
+│   │   │   │   │   └── LoadingOverlay.prefab
 │   │   │   │   ├── QuestionPopup.prefab
 │   │   │   │   ├── ElementSlot.prefab
 │   │   │   │   ├── StarBadge.prefab
@@ -178,6 +190,10 @@ SummaRace/                                  ← Unity project root
 │   │           ├── tree_mat.mat
 │   │           └── fog_mat.mat
 │   │
+│   │   └── SharedMaterials/                ← Shared materials across 2D/3D
+│   │       ├── ui_glow_mat.mat
+│   │       └── outline_mat.mat
+│   │
 │   ├── Audio/                              ← All audio files
 │   │   ├── Music/
 │   │   │   ├── menu_theme.mp3
@@ -254,6 +270,37 @@ SummaRace/                                  ← Unity project root
 ├── .gitignore                              ← Tells Git which files to ignore
 └── README.md                               ← Quick project overview
 ```
+
+---
+
+## 🔄 Reusability Design
+
+This project is designed to **avoid duplication**. Key reusable elements:
+
+### Single Mission Scene for All Levels
+- `06_Mission3DRun.unity` handles ALL 3 story levels
+- Story data loaded dynamically from JSON (level1.json, level2.json, level3.json)
+- Same scripts, different data = zero duplication
+
+### Shared Prefabs
+| Prefab | Used In | Purpose |
+|--------|---------|---------|
+| Teacher.prefab | TeacherWelcome, MissionIntro, Victory | Ms. Lumi character |
+| PlayerCharacter.prefab | Mission3DRun | Same player, swappable avatar |
+| ButtonPrimary.prefab | All UI scenes | Consistent button style |
+| DialogPanel.prefab | All UI scenes | Consistent dialog boxes |
+| LoadingOverlay.prefab | Scene transitions | Fade in/out overlay |
+| QuestionPopup.prefab | StoryReader, Mission | Same popup, different context |
+
+### Core Singletons (Persist Across Scenes)
+- **GameManager** - Current level, story progress, player name
+- **SaveManager** - PlayerPrefs wrapper for save/load
+- **AudioManager** - Music/SFX, volume settings
+- **SceneLoader** - Transitions with fade
+
+### Data-Driven Balance (ScriptableObjects)
+- Change speed, danger levels, timers WITHOUT code changes
+- One DifficultyTuning.asset with per-level values
 
 ---
 
