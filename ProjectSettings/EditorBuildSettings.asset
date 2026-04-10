@@ -6,7 +6,34 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Game/Scenes/00_Splash.unity
+    guid: 288256bec21c81d419511dd7af1cd3cb
+  - enabled: 1
+    path: Assets/_Game/Scenes/01_NameEntry.unity
+    guid: e9f4a033f64134146853dfbb28bed568
+  - enabled: 1
+    path: Assets/_Game/Scenes/02_TeacherWelcome.unity
+    guid: e96c0d4b3d78e7e40990f1e0e1b3c495
+  - enabled: 1
+    path: Assets/_Game/Scenes/03_LevelSelect.unity
+    guid: b840eb77da01a3445a52d85243ca261a
+  - enabled: 1
+    path: Assets/_Game/Scenes/04_StoryReader.unity
+    guid: 92a78e2a52804e54fb7ed2ea418ec666
+  - enabled: 1
+    path: Assets/_Game/Scenes/05_MissionIntro.unity
+    guid: f766bc8e32219ae42bb4658275f8c644
+  - enabled: 1
+    path: Assets/_Game/Scenes/06_Mission3DRun.unity
+    guid: 73a14e59876ef2441bb4759536f56294
+  - enabled: 1
+    path: Assets/_Game/Scenes/07_FinalSummary.unity
+    guid: bc7561ae153bce442865c510787e3939
+  - enabled: 1
+    path: Assets/_Game/Scenes/08_Victory.unity
+    guid: ebb57de41f57dfc4f8bdfe4e109fd437
+  - enabled: 1
+    path: Assets/_Game/Scenes/99_GameComplete.unity
+    guid: 174a95f7e7257754abe22516d85b00f0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
