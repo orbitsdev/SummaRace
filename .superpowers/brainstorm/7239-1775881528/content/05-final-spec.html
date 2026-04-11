@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SummaRace — Arctic Adventure Theme Spec</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0D1B2A; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 20px; max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 28px; color: #87CEEB; margin-bottom: 4px; }
+  h2 { font-size: 20px; color: #42A5F5; margin: 24px 0 12px; }
+  .sub { color: #78909C; font-size: 14px; margin-bottom: 24px; }
+  .badge { display: inline-block; background: #1E88E5; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 16px; }
+
+  .palette { display: flex; gap: 2px; margin: 12px 0; border-radius: 12px; overflow: hidden; height: 60px; }
+  .palette div { flex: 1; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; font-size: 10px; color: rgba(255,255,255,0.8); text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+
+  .scene-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 16px 0; }
+  .scene-card { background: #1B2838; border-radius: 10px; padding: 10px; text-align: center; border: 2px solid transparent; }
+  .scene-card .num { font-size: 11px; color: #546E7A; }
+  .scene-card .name { font-size: 13px; font-weight: bold; color: #E0E0E0; margin: 4px 0; }
+  .scene-card .accent { width: 100%; height: 6px; border-radius: 3px; margin-top: 6px; }
+
+  .layer-diagram { background: #1B2838; border-radius: 12px; padding: 16px; margin: 12px 0; }
+  .layer { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .layer:last-child { border-bottom: none; }
+  .layer-num { width: 24px; height: 24px; border-radius: 50%; background: #42A5F5; color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; flex-shrink: 0; }
+  .layer-name { font-weight: bold; color: #B0BEC5; width: 140px; font-size: 13px; }
+  .layer-desc { color: #78909C; font-size: 12px; }
+
+  .asset-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 12px 0; }
+  .asset-card { background: #1B2838; border-radius: 10px; padding: 14px; }
+  .asset-card h4 { color: #42A5F5; font-size: 14px; margin-bottom: 4px; }
+  .asset-card .count { color: #FFD54F; font-size: 20px; font-weight: bold; }
+  .asset-card p { color: #78909C; font-size: 12px; margin-top: 4px; }
+
+  .checklist { background: #1B2838; border-radius: 12px; padding: 16px; margin: 12px 0; }
+  .check-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; color: #B0BEC5; }
+  .check-item .dot { width: 8px; height: 8px; border-radius: 50%; background: #42A5F5; flex-shrink: 0; }
+  .check-item .dot.warn { background: #FFB300; }
+
+  .status { text-align: center; margin-top: 24px; padding: 16px; background: #1B3A1B; border: 1px solid #2E7D32; border-radius: 12px; }
+  .status strong { color: #66BB6A; }
+</style>
+</head>
+<body>
+
+<h1>Arctic Adventure Theme</h1>
+<p class="sub">Visual theme specification for SummaRace — saved to Documentation/SUMMARACE_VISUAL_THEME.md</p>
+<span class="badge">SKYBLUE ARCTIC DAY</span>
+
+<h2>Primary Color Palette</h2>
+<div class="palette">
+  <div style="background: #0D47A1;">Sky Dark</div>
+  <div style="background: #1E88E5;">Sky Mid</div>
+  <div style="background: #42A5F5;">Bright</div>
+  <div style="background: #87CEEB;">Sky Light</div>
+  <div style="background: #B0C4DE; color: #333;">Frost</div>
+  <div style="background: #E0F0FF; color: #333;">Ice</div>
+  <div style="background: #FFFFFF; color: #333;">Snow</div>
+</div>
+
+<h2>Per-Scene Accent Colors</h2>
+<div class="scene-grid">
+  <div class="scene-card">
+    <div class="num">00</div>
+    <div class="name">Splash</div>
+    <div class="accent" style="background: #87CEEB;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">01</div>
+    <div class="name">Name Entry</div>
+    <div class="accent" style="background: #7B68EE;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">02</div>
+    <div class="name">Teacher</div>
+    <div class="accent" style="background: #26A69A;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">03</div>
+    <div class="name">Levels</div>
+    <div class="accent" style="background: #FFB300;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">04</div>
+    <div class="name">Story</div>
+    <div class="accent" style="background: #F48FB1;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">05</div>
+    <div class="name">Mission</div>
+    <div class="accent" style="background: #26A69A;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">06</div>
+    <div class="name">3D Run</div>
+    <div class="accent" style="background: #E0F0FF;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">07</div>
+    <div class="name">Summary</div>
+    <div class="accent" style="background: #B39DDB;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">08</div>
+    <div class="name">Victory</div>
+    <div class="accent" style="background: #66BB6A;"></div>
+  </div>
+  <div class="scene-card">
+    <div class="num">09</div>
+    <div class="name">Complete</div>
+    <div class="accent" style="background: #FFD54F;"></div>
+  </div>
+</div>
+
+<h2>Layer System (Every 2D Scene)</h2>
+<div class="layer-diagram">
+  <div class="layer"><div class="layer-num">7</div><div class="layer-name">UI Elements</div><div class="layer-desc">Cartoon UI panels, buttons, text — always on top</div></div>
+  <div class="layer"><div class="layer-num">6</div><div class="layer-name">Particles</div><div class="layer-desc">Snowflakes, sparkles, confetti — always animated</div></div>
+  <div class="layer"><div class="layer-num">5</div><div class="layer-name">Foreground</div><div class="layer-desc">Close trees/bushes framing screen edges — fast parallax</div></div>
+  <div class="layer"><div class="layer-num">4</div><div class="layer-name">Snow Ground</div><div class="layer-desc">Curved white surface with sparkle dots — not flat!</div></div>
+  <div class="layer"><div class="layer-num">3</div><div class="layer-name">Mid-ground</div><div class="layer-desc">Kenney trees, buildings, Ms. Lumi — medium parallax</div></div>
+  <div class="layer"><div class="layer-num">2</div><div class="layer-name">Distance</div><div class="layer-desc">Mountain silhouettes, hills — slow parallax</div></div>
+  <div class="layer"><div class="layer-num">1</div><div class="layer-name">Sky</div><div class="layer-desc">BOXOPHOBIC skybox or gradient + clouds — fixed</div></div>
+</div>
+
+<h2>Plugin Asset Usage</h2>
+<div class="asset-grid">
+  <div class="asset-card">
+    <h4>Cartoon UI</h4>
+    <div class="count">816 sprites</div>
+    <p>Buttons, panels, icons, progress bars, toggles, sliders — in 10 color variants. Core of ALL UI.</p>
+  </div>
+  <div class="asset-card">
+    <h4>Kenney Nature Kit</h4>
+    <div class="count">1,640+ assets</div>
+    <p>Trees, bushes, paths, houses, fences, signs — background layers for every 2D scene.</p>
+  </div>
+  <div class="asset-card">
+    <h4>Easy Chara</h4>
+    <div class="count">Ms. Lumi</div>
+    <p>Hisa Teacher character = Ms. Lumi. Idle, wave, talk, cheer poses. Scenes 02, 05, 08, 09.</p>
+  </div>
+  <div class="asset-card">
+    <h4>BOXOPHOBIC Skybox</h4>
+    <div class="count">Sky system</div>
+    <p>"Blue Sky" texture for 3D runner scene. Day/night blend for mood transitions.</p>
+  </div>
+  <div class="asset-card">
+    <h4>Trees Package Lite</h4>
+    <div class="count">59 assets</div>
+    <p>3D tree models for Scene 06 runner track environment.</p>
+  </div>
+  <div class="asset-card">
+    <h4>Progress Bar Toolkit</h4>
+    <div class="count">39 assets</div>
+    <p>Candy-themed bars, circular progress — loading states, timers.</p>
+  </div>
+</div>
+
+<h2>Still Need to Install</h2>
+<div class="checklist">
+  <div class="check-item"><div class="dot warn"></div><strong>DOTween (Free)</strong> — Animation engine. Replaces all manual coroutine animations. Must-have.</div>
+  <div class="check-item"><div class="dot warn"></div><strong>Snow Particle Pack</strong> — Pre-made snowflake particle systems with wind/drift.</div>
+  <div class="check-item"><div class="dot"></div><strong>Text Animator (Nice-to-have)</strong> — Typewriter, wobbly, rainbow text effects for Ms. Lumi speech.</div>
+  <div class="check-item"><div class="dot"></div><strong>Parallax System (Nice-to-have)</strong> — Tilt-based layer movement for mobile.</div>
+</div>
+
+<div class="status">
+  <strong>Spec written and saved to Documentation/SUMMARACE_VISUAL_THEME.md</strong><br>
+  <span style="color: #B0BEC5; font-size: 13px;">Review the spec file, then tell me in the terminal if you want changes or if we should proceed to implementation planning.</span>
+</div>
+
+</body>
+</html>

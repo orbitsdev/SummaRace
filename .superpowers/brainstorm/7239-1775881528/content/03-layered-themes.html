@@ -1,0 +1,427 @@
+<h2>SummaRace Scene 01 — Layered World + Theme Comparison</h2>
+<p class="subtitle">No more flat backgrounds. Each option shows a full layered scene: sky → mountains → trees → snow → particles → UI. Click your favorite.</p>
+
+<div class="cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+
+  <!-- Option A: Purple/Blue Winter Night -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="cursor: pointer;">
+    <div class="card-image" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
+      <div style="height: 420px; position: relative; overflow: hidden; background: linear-gradient(180deg, #0B0033 0%, #1a1050 20%, #2d1b69 40%, #4a2d8f 65%, #6B4EBB 85%, #9B7FD4 100%);">
+
+        <!-- Stars -->
+        <div style="position: absolute; top: 8px; left: 15%; width: 3px; height: 3px; background: white; border-radius: 50%; box-shadow: 0 0 4px white;"></div>
+        <div style="position: absolute; top: 20px; right: 20%; width: 2px; height: 2px; background: white; border-radius: 50%; box-shadow: 0 0 3px white;"></div>
+        <div style="position: absolute; top: 35px; left: 40%; width: 2px; height: 2px; background: white; border-radius: 50%; box-shadow: 0 0 4px white;"></div>
+        <div style="position: absolute; top: 15px; left: 70%; width: 3px; height: 3px; background: white; border-radius: 50%; box-shadow: 0 0 5px white;"></div>
+        <div style="position: absolute; top: 45px; left: 55%; width: 2px; height: 2px; background: white; border-radius: 50%; box-shadow: 0 0 3px white;"></div>
+
+        <!-- Moon -->
+        <div style="position: absolute; top: 15px; right: 30px; width: 40px; height: 40px; background: radial-gradient(circle, #FFF8DC 0%, #FFE4B5 60%, transparent 70%); border-radius: 50%; box-shadow: 0 0 30px rgba(255,248,220,0.4);"></div>
+
+        <!-- Layer 2: Distant mountains -->
+        <div style="position: absolute; bottom: 120px; left: -5%; width: 110%; height: 100px;">
+          <div style="position: absolute; bottom: 0; left: 5%; width: 0; height: 0; border-left: 80px solid transparent; border-right: 80px solid transparent; border-bottom: 90px solid #1E1050; opacity: 0.6;"></div>
+          <div style="position: absolute; bottom: 0; left: 25%; width: 0; height: 0; border-left: 100px solid transparent; border-right: 100px solid transparent; border-bottom: 110px solid #251560; opacity: 0.5;"></div>
+          <div style="position: absolute; bottom: 0; right: 10%; width: 0; height: 0; border-left: 90px solid transparent; border-right: 70px solid transparent; border-bottom: 80px solid #1E1050; opacity: 0.6;"></div>
+        </div>
+
+        <!-- Layer 3: Trees (dark silhouettes) -->
+        <div style="position: absolute; bottom: 100px; left: 0; width: 100%; height: 80px;">
+          <!-- Tree shapes -->
+          <div style="position: absolute; bottom: 0; left: 5%; width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 55px solid #1a0f40;"></div>
+          <div style="position: absolute; bottom: 0; left: 12%; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 45px solid #1a0f40;"></div>
+          <div style="position: absolute; bottom: 0; right: 8%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 60px solid #1a0f40;"></div>
+          <div style="position: absolute; bottom: 0; right: 18%; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 48px solid #1a0f40;"></div>
+          <div style="position: absolute; bottom: 0; left: 35%; width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-bottom: 40px solid #1a0f40;"></div>
+        </div>
+
+        <!-- Layer 4: Snow ground -->
+        <div style="position: absolute; bottom: 0; width: 100%; height: 110px; background: linear-gradient(180deg, #C8B8E8 0%, #E8DCF8 30%, #F0E8FF 100%); border-radius: 60% 60% 0 0;">
+          <!-- Snow sparkles -->
+          <div style="position: absolute; top: 20px; left: 20%; width: 4px; height: 4px; background: white; border-radius: 50; box-shadow: 0 0 6px white;"></div>
+          <div style="position: absolute; top: 35px; right: 30%; width: 3px; height: 3px; background: white; border-radius: 50%; box-shadow: 0 0 4px white;"></div>
+        </div>
+
+        <!-- Falling snowflakes -->
+        <div style="position: absolute; top: 60px; left: 10%; color: rgba(255,255,255,0.5); font-size: 12px;">❄</div>
+        <div style="position: absolute; top: 100px; left: 45%; color: rgba(255,255,255,0.4); font-size: 8px;">❄</div>
+        <div style="position: absolute; top: 80px; right: 15%; color: rgba(255,255,255,0.6); font-size: 14px;">❄</div>
+        <div style="position: absolute; top: 140px; left: 25%; color: rgba(255,255,255,0.3); font-size: 10px;">❄</div>
+        <div style="position: absolute; top: 160px; right: 35%; color: rgba(255,255,255,0.5); font-size: 11px;">❄</div>
+
+        <!-- Layer 6: UI Elements -->
+        <div style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); text-align: center; width: 85%;">
+          <p style="color: #F0E8FF; font-size: 18px; font-weight: bold; text-shadow: 0 2px 8px rgba(0,0,0,0.4); margin-bottom: 10px;">What's your name, runner?</p>
+
+          <!-- Cartoon UI style panel -->
+          <div style="background: rgba(255,255,255,0.12); border: 2px solid rgba(255,255,255,0.25); border-radius: 16px; padding: 10px 20px; margin-bottom: 12px; backdrop-filter: blur(4px);">
+            <span style="color: white; font-size: 16px; font-weight: bold; letter-spacing: 1px;">BRIAN</span>
+          </div>
+
+          <p style="color: #D4C8F0; font-size: 13px; margin-bottom: 8px;">Pick your avatar</p>
+
+          <!-- Avatars with Cartoon UI style frames -->
+          <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px;">
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #FF8A65; border: 3px solid #E8DCF8; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">🦊</div>
+              <span style="color: #D4C8F0; font-size: 10px;">Fox</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #81C784; border: 3px solid #E8DCF8; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">🐸</div>
+              <span style="color: #D4C8F0; font-size: 10px;">Frog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #90A4AE; border: 3px solid #E8DCF8; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">🐶</div>
+              <span style="color: #D4C8F0; font-size: 10px;">Dog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #F48FB1; border: 3px solid #FFD700; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">🐷</div>
+              <span style="color: #FFD700; font-size: 10px; font-weight: bold;">Pig</span>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(180deg, #7B68EE, #5B4ACE); color: white; padding: 10px 35px; border-radius: 25px; font-weight: bold; font-size: 14px; display: inline-block; box-shadow: 0 4px 12px rgba(91,74,206,0.5), inset 0 1px 0 rgba(255,255,255,0.2);">Continue ▸</div>
+        </div>
+
+        <!-- Character peeking (Ms. Lumi silhouette) -->
+        <div style="position: absolute; bottom: 60px; right: 8px; width: 40px; height: 55px; background: rgba(200,180,240,0.3); border-radius: 20px 20px 8px 8px; border: 2px solid rgba(200,180,240,0.2);"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A) Purple Winter Night</h3>
+      <p><strong>Layers:</strong> Starry sky → purple mountains → dark pine silhouettes → glowing snow ground → falling snowflakes → frosted UI panels</p>
+      <p style="font-size: 13px; color: #888;">Mood: Magical, dreamy, mysterious. Like a storybook winter night.</p>
+      <div style="display: flex; gap: 4px; margin-top: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #0B0033;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #2d1b69;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #7B68EE;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #C8B8E8;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #F0E8FF;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B: Skyblue Arctic Day -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="cursor: pointer;">
+    <div class="card-image" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
+      <div style="height: 420px; position: relative; overflow: hidden; background: linear-gradient(180deg, #4A90D9 0%, #6BB3E8 25%, #87CEEB 50%, #B5D8F0 75%, #D4EAFF 100%);">
+
+        <!-- Clouds -->
+        <div style="position: absolute; top: 20px; left: 10%; width: 80px; height: 28px; background: rgba(255,255,255,0.7); border-radius: 20px;"></div>
+        <div style="position: absolute; top: 15px; left: 15%; width: 40px; height: 20px; background: rgba(255,255,255,0.7); border-radius: 15px; transform: translateY(-10px);"></div>
+        <div style="position: absolute; top: 40px; right: 15%; width: 60px; height: 22px; background: rgba(255,255,255,0.5); border-radius: 15px;"></div>
+
+        <!-- Sun glow -->
+        <div style="position: absolute; top: 10px; right: 25px; width: 45px; height: 45px; background: radial-gradient(circle, #FFF9C4 0%, #FFEE58 40%, transparent 70%); border-radius: 50%; box-shadow: 0 0 40px rgba(255,238,88,0.3);"></div>
+
+        <!-- Layer 2: Distant snowy mountains -->
+        <div style="position: absolute; bottom: 130px; left: -5%; width: 110%; height: 100px;">
+          <div style="position: absolute; bottom: 0; left: 5%; width: 0; height: 0; border-left: 80px solid transparent; border-right: 80px solid transparent; border-bottom: 95px solid #9EC5E0; opacity: 0.7;"></div>
+          <div style="position: absolute; bottom: 0; left: 30%; width: 0; height: 0; border-left: 100px solid transparent; border-right: 90px solid transparent; border-bottom: 110px solid #8BB8D8; opacity: 0.6;"></div>
+          <div style="position: absolute; bottom: 0; right: 5%; width: 0; height: 0; border-left: 70px solid transparent; border-right: 90px solid transparent; border-bottom: 85px solid #9EC5E0; opacity: 0.7;"></div>
+          <!-- Snow caps -->
+          <div style="position: absolute; bottom: 85px; left: 33%; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 20px solid white; opacity: 0.8;"></div>
+        </div>
+
+        <!-- Layer 3: Snowy pine trees -->
+        <div style="position: absolute; bottom: 105px; left: 0; width: 100%; height: 80px;">
+          <div style="position: absolute; bottom: 0; left: 3%; width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 55px solid #2E7D32;"></div>
+          <div style="position: absolute; bottom: 40px; left: 3%; width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 12px solid white; opacity: 0.7;"></div>
+          <div style="position: absolute; bottom: 0; left: 14%; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 42px solid #388E3C;"></div>
+          <div style="position: absolute; bottom: 0; right: 5%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 60px solid #2E7D32;"></div>
+          <div style="position: absolute; bottom: 45px; right: 7%; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 14px solid white; opacity: 0.6;"></div>
+          <div style="position: absolute; bottom: 0; right: 18%; width: 0; height: 0; border-left: 16px solid transparent; border-right: 16px solid transparent; border-bottom: 48px solid #388E3C;"></div>
+        </div>
+
+        <!-- Layer 4: Snow ground -->
+        <div style="position: absolute; bottom: 0; width: 100%; height: 115px; background: linear-gradient(180deg, #E8F4FD 0%, #F5FAFF 30%, #FFFFFF 100%); border-radius: 50% 50% 0 0;">
+          <div style="position: absolute; top: 25px; left: 25%; width: 5px; height: 5px; background: rgba(135,206,235,0.4); border-radius: 50%;"></div>
+          <div style="position: absolute; top: 40px; right: 20%; width: 4px; height: 4px; background: rgba(135,206,235,0.3); border-radius: 50%;"></div>
+        </div>
+
+        <!-- Snowflakes -->
+        <div style="position: absolute; top: 65px; left: 12%; color: rgba(255,255,255,0.7); font-size: 10px;">❄</div>
+        <div style="position: absolute; top: 100px; left: 50%; color: rgba(255,255,255,0.5); font-size: 8px;">❄</div>
+        <div style="position: absolute; top: 85px; right: 12%; color: rgba(255,255,255,0.8); font-size: 12px;">❄</div>
+        <div style="position: absolute; top: 150px; left: 30%; color: rgba(255,255,255,0.4); font-size: 9px;">❄</div>
+
+        <!-- Layer 6: UI -->
+        <div style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); text-align: center; width: 85%;">
+          <p style="color: #0D47A1; font-size: 18px; font-weight: bold; text-shadow: 0 1px 4px rgba(255,255,255,0.8); margin-bottom: 10px;">What's your name, runner?</p>
+
+          <div style="background: white; border: 3px solid #42A5F5; border-radius: 16px; padding: 10px 20px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <span style="color: #0D47A1; font-size: 16px; font-weight: bold; letter-spacing: 1px;">BRIAN</span>
+          </div>
+
+          <p style="color: #1565C0; font-size: 13px; margin-bottom: 8px;">Pick your avatar</p>
+
+          <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px;">
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #FF8A65; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🦊</div>
+              <span style="color: #1565C0; font-size: 10px;">Fox</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #81C784; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐸</div>
+              <span style="color: #1565C0; font-size: 10px;">Frog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #90A4AE; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐶</div>
+              <span style="color: #1565C0; font-size: 10px;">Dog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #F48FB1; border: 3px solid #FFD700; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐷</div>
+              <span style="color: #FFD700; font-size: 10px; font-weight: bold;">Pig</span>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(180deg, #42A5F5, #1E88E5); color: white; padding: 10px 35px; border-radius: 25px; font-weight: bold; font-size: 14px; display: inline-block; box-shadow: 0 4px 12px rgba(30,136,229,0.4), inset 0 1px 0 rgba(255,255,255,0.3);">Continue ▸</div>
+        </div>
+
+        <!-- Snowman decoration -->
+        <div style="position: absolute; bottom: 75px; left: 10px;">
+          <div style="width: 20px; height: 20px; background: white; border-radius: 50%; border: 1px solid #B0BEC5;"></div>
+          <div style="width: 26px; height: 26px; background: white; border-radius: 50%; border: 1px solid #B0BEC5; margin-top: -5px; margin-left: -3px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B) Skyblue Arctic Day</h3>
+      <p><strong>Layers:</strong> Blue sky + clouds + sun → snowy mountains → green pines with snow caps → white snow ground → snowflakes → crisp white UI</p>
+      <p style="font-size: 13px; color: #888;">Mood: Bright, adventurous, energetic. Like a Saturday morning cartoon.</p>
+      <div style="display: flex; gap: 4px; margin-top: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #0D47A1;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #42A5F5;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #87CEEB;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #E8F4FD;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FFFFFF; border: 1px solid #ddd;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C: Warm Cozy -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="cursor: pointer;">
+    <div class="card-image" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
+      <div style="height: 420px; position: relative; overflow: hidden; background: linear-gradient(180deg, #E65100 0%, #FF8F00 20%, #FFB74D 45%, #FFE0B2 70%, #FFF3E0 100%);">
+
+        <!-- Warm glow sun -->
+        <div style="position: absolute; top: 5px; left: 50%; transform: translateX(-50%); width: 70px; height: 35px; background: radial-gradient(ellipse, #FFEE58 0%, #FFD54F 40%, transparent 70%); border-radius: 50%; box-shadow: 0 0 50px rgba(255,213,79,0.5);"></div>
+
+        <!-- Warm clouds -->
+        <div style="position: absolute; top: 30px; left: 8%; width: 70px; height: 24px; background: rgba(255,255,255,0.4); border-radius: 18px;"></div>
+        <div style="position: absolute; top: 45px; right: 12%; width: 55px; height: 20px; background: rgba(255,255,255,0.3); border-radius: 14px;"></div>
+
+        <!-- Distant hills -->
+        <div style="position: absolute; bottom: 130px; left: -5%; width: 110%; height: 80px;">
+          <div style="position: absolute; bottom: 0; left: 0%; width: 0; height: 0; border-left: 100px solid transparent; border-right: 100px solid transparent; border-bottom: 80px solid #E8A860; opacity: 0.5;"></div>
+          <div style="position: absolute; bottom: 0; right: 0%; width: 0; height: 0; border-left: 90px solid transparent; border-right: 80px solid transparent; border-bottom: 70px solid #D4964A; opacity: 0.5;"></div>
+        </div>
+
+        <!-- Trees (autumn/warm tones) -->
+        <div style="position: absolute; bottom: 105px; left: 0; width: 100%;">
+          <div style="position: absolute; bottom: 0; left: 4%; width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 50px solid #8D6E3A;"></div>
+          <div style="position: absolute; bottom: 0; left: 15%; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 40px solid #A0794A;"></div>
+          <div style="position: absolute; bottom: 0; right: 6%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 16px solid transparent; border-bottom: 55px solid #7A5A2E;"></div>
+          <div style="position: absolute; bottom: 0; right: 20%; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 45px solid #8D6E3A;"></div>
+        </div>
+
+        <!-- Snow ground (warm-tinted) -->
+        <div style="position: absolute; bottom: 0; width: 100%; height: 115px; background: linear-gradient(180deg, #FFE8CC 0%, #FFF3E0 40%, #FFFAF0 100%); border-radius: 50% 50% 0 0;"></div>
+
+        <!-- Sparkles -->
+        <div style="position: absolute; top: 70px; left: 15%; color: rgba(255,255,255,0.5); font-size: 10px;">✨</div>
+        <div style="position: absolute; top: 110px; right: 10%; color: rgba(255,255,255,0.4); font-size: 8px;">✨</div>
+        <div style="position: absolute; top: 150px; left: 40%; color: rgba(255,255,255,0.3); font-size: 12px;">✨</div>
+
+        <!-- UI -->
+        <div style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); text-align: center; width: 85%;">
+          <p style="color: #BF360C; font-size: 18px; font-weight: bold; text-shadow: 0 1px 4px rgba(255,255,255,0.6); margin-bottom: 10px;">What's your name, runner?</p>
+
+          <div style="background: #FFFAF0; border: 3px solid #E65100; border-radius: 16px; padding: 10px 20px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <span style="color: #BF360C; font-size: 16px; font-weight: bold; letter-spacing: 1px;">BRIAN</span>
+          </div>
+
+          <p style="color: #E65100; font-size: 13px; margin-bottom: 8px;">Pick your avatar</p>
+
+          <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px;">
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #FF8A65; border: 3px solid #FFFAF0; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🦊</div>
+              <span style="color: #BF360C; font-size: 10px;">Fox</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #81C784; border: 3px solid #FFFAF0; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐸</div>
+              <span style="color: #BF360C; font-size: 10px;">Frog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #90A4AE; border: 3px solid #FFFAF0; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐶</div>
+              <span style="color: #BF360C; font-size: 10px;">Dog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #F48FB1; border: 3px solid #FFD700; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐷</div>
+              <span style="color: #FFD700; font-size: 10px; font-weight: bold;">Pig</span>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(180deg, #FF9800, #E65100); color: white; padding: 10px 35px; border-radius: 25px; font-weight: bold; font-size: 14px; display: inline-block; box-shadow: 0 4px 12px rgba(230,81,0,0.4), inset 0 1px 0 rgba(255,255,255,0.3);">Continue ▸</div>
+        </div>
+
+        <!-- Cabin silhouette -->
+        <div style="position: absolute; bottom: 80px; left: 5px; width: 35px; height: 25px; background: #8D6E3A; border-radius: 2px;">
+          <div style="position: absolute; top: -12px; left: -3px; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 14px solid #7A5A2E;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C) Warm & Cozy Sunset</h3>
+      <p><strong>Layers:</strong> Golden sunset sky → warm hills → autumn-toned trees → cream snow → warm sparkles → earthy UI panels</p>
+      <p style="font-size: 13px; color: #888;">Mood: Cozy, friendly, inviting. Like hot cocoa by the fireplace. Less "winter" though.</p>
+      <div style="display: flex; gap: 4px; margin-top: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #BF360C;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #E65100;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF9800;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FFE0B2;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FFFAF0; border: 1px solid #ddd;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option D: Colorful Playful -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)" style="cursor: pointer;">
+    <div class="card-image" style="padding: 0; overflow: hidden; border-radius: 12px 12px 0 0;">
+      <div style="height: 420px; position: relative; overflow: hidden; background: linear-gradient(180deg, #5C6BC0 0%, #7986CB 20%, #9FA8DA 40%, #C5CAE9 60%, #E8EAF6 80%, #F3E5F5 100%);">
+
+        <!-- Colorful floating shapes -->
+        <div style="position: absolute; top: 12px; left: 10%; width: 20px; height: 20px; background: #FF8A65; border-radius: 50%; opacity: 0.4;"></div>
+        <div style="position: absolute; top: 30px; right: 15%; width: 16px; height: 16px; background: #81C784; border-radius: 4px; opacity: 0.4; transform: rotate(45deg);"></div>
+        <div style="position: absolute; top: 50px; left: 30%; width: 14px; height: 14px; background: #FFD54F; border-radius: 50%; opacity: 0.3;"></div>
+        <div style="position: absolute; top: 25px; left: 55%; width: 12px; height: 12px; background: #4FC3F7; border-radius: 3px; opacity: 0.35; transform: rotate(30deg);"></div>
+
+        <!-- Rainbow mountains -->
+        <div style="position: absolute; bottom: 130px; left: -5%; width: 110%; height: 90px;">
+          <div style="position: absolute; bottom: 0; left: 0%; width: 0; height: 0; border-left: 90px solid transparent; border-right: 90px solid transparent; border-bottom: 85px solid #CE93D8; opacity: 0.5;"></div>
+          <div style="position: absolute; bottom: 0; left: 30%; width: 0; height: 0; border-left: 100px solid transparent; border-right: 80px solid transparent; border-bottom: 95px solid #90CAF9; opacity: 0.4;"></div>
+          <div style="position: absolute; bottom: 0; right: 0%; width: 0; height: 0; border-left: 80px solid transparent; border-right: 100px solid transparent; border-bottom: 80px solid #A5D6A7; opacity: 0.4;"></div>
+        </div>
+
+        <!-- Colorful trees -->
+        <div style="position: absolute; bottom: 105px; left: 0; width: 100%;">
+          <div style="position: absolute; bottom: 0; left: 4%; width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 50px solid #66BB6A;"></div>
+          <div style="position: absolute; bottom: 0; left: 14%; width: 0; height: 0; border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 42px solid #4CAF50;"></div>
+          <div style="position: absolute; bottom: 0; right: 6%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 16px solid transparent; border-bottom: 55px solid #43A047;"></div>
+          <div style="position: absolute; bottom: 0; right: 20%; width: 0; height: 0; border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 45px solid #66BB6A;"></div>
+        </div>
+
+        <!-- Snow ground (with color tint) -->
+        <div style="position: absolute; bottom: 0; width: 100%; height: 115px; background: linear-gradient(180deg, #E8EAF6 0%, #F3E5F5 30%, #FFFFFF 100%); border-radius: 50% 50% 0 0;"></div>
+
+        <!-- Colorful snowflakes/confetti -->
+        <div style="position: absolute; top: 70px; left: 10%; color: #FF8A65; font-size: 10px;">●</div>
+        <div style="position: absolute; top: 100px; left: 45%; color: #81C784; font-size: 8px;">▲</div>
+        <div style="position: absolute; top: 85px; right: 12%; color: rgba(255,255,255,0.8); font-size: 12px;">❄</div>
+        <div style="position: absolute; top: 130px; left: 25%; color: #FFD54F; font-size: 9px;">★</div>
+        <div style="position: absolute; top: 155px; right: 30%; color: #4FC3F7; font-size: 10px;">◆</div>
+
+        <!-- UI -->
+        <div style="position: absolute; top: 70px; left: 50%; transform: translateX(-50%); text-align: center; width: 85%;">
+          <p style="color: #283593; font-size: 18px; font-weight: bold; text-shadow: 0 1px 4px rgba(255,255,255,0.6); margin-bottom: 10px;">What's your name, runner?</p>
+
+          <div style="background: white; border: 3px solid #7C4DFF; border-radius: 16px; padding: 10px 20px; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <span style="color: #283593; font-size: 16px; font-weight: bold; letter-spacing: 1px;">BRIAN</span>
+          </div>
+
+          <p style="color: #5C6BC0; font-size: 13px; margin-bottom: 8px;">Pick your avatar</p>
+
+          <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 14px;">
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #FF8A65; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🦊</div>
+              <span style="color: #E64A19; font-size: 10px;">Fox</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #81C784; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐸</div>
+              <span style="color: #2E7D32; font-size: 10px;">Frog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #90CAF9; border: 3px solid white; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐶</div>
+              <span style="color: #1565C0; font-size: 10px;">Dog</span>
+            </div>
+            <div style="text-align: center;">
+              <div style="width: 52px; height: 52px; border-radius: 14px; background: #F48FB1; border: 3px solid #FFD700; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">🐷</div>
+              <span style="color: #FFD700; font-size: 10px; font-weight: bold;">Pig</span>
+            </div>
+          </div>
+
+          <div style="background: linear-gradient(135deg, #7C4DFF, #536DFE, #448AFF); color: white; padding: 10px 35px; border-radius: 25px; font-weight: bold; font-size: 14px; display: inline-block; box-shadow: 0 4px 12px rgba(124,77,255,0.4), inset 0 1px 0 rgba(255,255,255,0.3);">Continue ▸</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>D) Colorful & Playful</h3>
+      <p><strong>Layers:</strong> Pastel gradient sky → colorful floating shapes → tinted mountains → green pines → lavender snow → confetti particles → vibrant UI</p>
+      <p style="font-size: 13px; color: #888;">Mood: Energetic, fun, carnival-like. Maximum kid appeal. Each scene gets its own accent color.</p>
+      <div style="display: flex; gap: 4px; margin-top: 6px;">
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #7C4DFF;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #4FC3F7;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #81C784;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FFD54F;"></div>
+        <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF8A65;"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top: 24px;">
+  <div style="background: #f0f4ff; border-radius: 12px; padding: 16px; border: 1px solid #c5cae9;">
+    <h3 style="margin-top: 0;">What each option uses from your plugins</h3>
+    <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #ddd;">
+        <th style="text-align: left; padding: 8px;">Asset</th>
+        <th style="text-align: center; padding: 8px;">A (Purple)</th>
+        <th style="text-align: center; padding: 8px;">B (Arctic)</th>
+        <th style="text-align: center; padding: 8px;">C (Warm)</th>
+        <th style="text-align: center; padding: 8px;">D (Colorful)</th>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 8px;">Cartoon UI buttons/panels</td>
+        <td style="text-align: center;">Purple set</td>
+        <td style="text-align: center;">Skyblue set</td>
+        <td style="text-align: center;">Orange set</td>
+        <td style="text-align: center;">Mix all colors</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 8px;">Cartoon UI animal icons</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 8px;">Kenney Nature Kit trees</td>
+        <td style="text-align: center;">Silhouettes</td>
+        <td style="text-align: center;">Snow-capped</td>
+        <td style="text-align: center;">Autumn tone</td>
+        <td style="text-align: center;">Green bright</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 8px;">BOXOPHOBIC Skybox</td>
+        <td style="text-align: center;">Night sky</td>
+        <td style="text-align: center;">Day sky</td>
+        <td style="text-align: center;">Sunset</td>
+        <td style="text-align: center;">Gradient</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 8px;">Trees Package Lite</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+        <td style="text-align: center;">✅</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">Easy Chara (Ms. Lumi)</td>
+        <td style="text-align: center;">Optional</td>
+        <td style="text-align: center;">Optional</td>
+        <td style="text-align: center;">Optional</td>
+        <td style="text-align: center;">Optional</td>
+      </tr>
+    </table>
+  </div>
+</div>

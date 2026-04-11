@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SummaRace Theme Picker</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 20px; }
+  h1 { font-size: 24px; margin-bottom: 6px; color: #fff; }
+  .sub { color: #999; font-size: 14px; margin-bottom: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .card { border-radius: 16px; overflow: hidden; border: 3px solid transparent; cursor: pointer; transition: all 0.2s; background: #252540; }
+  .card:hover { border-color: #666; transform: translateY(-2px); }
+  .card.selected { border-color: #FFD700; box-shadow: 0 0 20px rgba(255,215,0,0.3); }
+  .scene { width: 100%; height: 380px; position: relative; overflow: hidden; }
+  .info { padding: 16px; }
+  .info h3 { font-size: 18px; margin-bottom: 4px; color: #fff; }
+  .info p { font-size: 13px; color: #aaa; line-height: 1.4; }
+  .info .layers { font-size: 12px; color: #888; margin-top: 4px; }
+  .swatches { display: flex; gap: 4px; margin-top: 8px; }
+  .swatch { width: 22px; height: 22px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); }
+  .pick-label { text-align: center; margin-top: 20px; padding: 14px; background: #252540; border-radius: 12px; color: #999; font-size: 14px; }
+  .pick-label strong { color: #FFD700; }
+</style>
+</head>
+<body>
+
+<h1>SummaRace Scene 01 — Pick Your Theme</h1>
+<p class="sub">Each option is a fully layered scene: sky → mountains → trees → snow → particles → UI. Click to select.</p>
+
+<div class="grid">
+
+  <!-- A: Purple Night -->
+  <div class="card" onclick="select(this,'a')">
+    <div class="scene">
+      <svg viewBox="0 0 400 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky gradient -->
+        <defs>
+          <linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0B0033"/>
+            <stop offset="30%" stop-color="#1a1050"/>
+            <stop offset="60%" stop-color="#2d1b69"/>
+            <stop offset="100%" stop-color="#6B4EBB"/>
+          </linearGradient>
+          <linearGradient id="snowA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C8B8E8"/>
+            <stop offset="100%" stop-color="#F0E8FF"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="380" fill="url(#skyA)"/>
+
+        <!-- Stars -->
+        <circle cx="60" cy="20" r="1.5" fill="white" opacity="0.8"/>
+        <circle cx="150" cy="35" r="1" fill="white" opacity="0.6"/>
+        <circle cx="280" cy="15" r="1.5" fill="white" opacity="0.7"/>
+        <circle cx="340" cy="40" r="1" fill="white" opacity="0.5"/>
+        <circle cx="200" cy="25" r="1" fill="white" opacity="0.6"/>
+        <circle cx="100" cy="50" r="1.5" fill="white" opacity="0.4"/>
+
+        <!-- Moon -->
+        <circle cx="330" cy="45" r="18" fill="#FFF8DC" opacity="0.8"/>
+        <circle cx="330" cy="45" r="25" fill="#FFF8DC" opacity="0.15"/>
+
+        <!-- Mountains -->
+        <polygon points="0,280 80,180 160,280" fill="#1E1050" opacity="0.6"/>
+        <polygon points="100,280 200,160 300,280" fill="#251560" opacity="0.5"/>
+        <polygon points="250,280 350,190 450,280" fill="#1E1050" opacity="0.6"/>
+
+        <!-- Trees -->
+        <polygon points="20,280 35,220 50,280" fill="#1a0f40"/>
+        <polygon points="60,280 72,230 84,280" fill="#1a0f40"/>
+        <polygon points="320,280 340,210 360,280" fill="#1a0f40"/>
+        <polygon points="370,280 382,235 394,280" fill="#1a0f40"/>
+        <polygon points="140,280 152,240 164,280" fill="#1a0f40"/>
+
+        <!-- Snow ground -->
+        <ellipse cx="200" cy="330" rx="250" ry="70" fill="url(#snowA)"/>
+
+        <!-- Snowflakes -->
+        <text x="40" y="120" fill="white" opacity="0.5" font-size="12">❄</text>
+        <text x="180" y="150" fill="white" opacity="0.3" font-size="9">❄</text>
+        <text x="310" y="110" fill="white" opacity="0.6" font-size="14">❄</text>
+        <text x="100" y="180" fill="white" opacity="0.4" font-size="10">❄</text>
+        <text x="250" y="200" fill="white" opacity="0.3" font-size="11">❄</text>
+
+        <!-- UI Panel -->
+        <rect x="80" y="80" width="240" height="180" rx="16" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+
+        <!-- Title -->
+        <text x="200" y="110" text-anchor="middle" fill="#F0E8FF" font-size="15" font-weight="bold">What's your name, runner?</text>
+
+        <!-- Input field -->
+        <rect x="110" y="120" width="180" height="32" rx="10" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <text x="200" y="141" text-anchor="middle" fill="white" font-size="14" font-weight="bold">BRIAN</text>
+
+        <!-- Subtitle -->
+        <text x="200" y="172" text-anchor="middle" fill="#D4C8F0" font-size="11">Pick your avatar</text>
+
+        <!-- Avatars -->
+        <rect x="108" y="180" width="40" height="40" rx="10" fill="#FF8A65" stroke="#E8DCF8" stroke-width="2"/>
+        <text x="128" y="205" text-anchor="middle" font-size="18">🦊</text>
+        <rect x="158" y="180" width="40" height="40" rx="10" fill="#81C784" stroke="#E8DCF8" stroke-width="2"/>
+        <text x="178" y="205" text-anchor="middle" font-size="18">🐸</text>
+        <rect x="208" y="180" width="40" height="40" rx="10" fill="#90A4AE" stroke="#E8DCF8" stroke-width="2"/>
+        <text x="228" y="205" text-anchor="middle" font-size="18">🐶</text>
+        <rect x="258" y="180" width="40" height="40" rx="10" fill="#F48FB1" stroke="#FFD700" stroke-width="2"/>
+        <text x="278" y="205" text-anchor="middle" font-size="18">🐷</text>
+
+        <!-- Button -->
+        <rect x="145" y="232" width="110" height="34" rx="17" fill="#7B68EE"/>
+        <text x="200" y="254" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Continue ▸</text>
+
+        <!-- Character silhouette -->
+        <ellipse cx="370" cy="290" rx="15" ry="22" fill="rgba(200,180,240,0.3)" stroke="rgba(200,180,240,0.2)" stroke-width="1.5"/>
+        <circle cx="370" cy="265" r="10" fill="rgba(200,180,240,0.3)" stroke="rgba(200,180,240,0.2)" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="info">
+      <h3>A) Purple Winter Night ✨</h3>
+      <p>Magical, dreamy, mysterious. Like a storybook winter night.</p>
+      <div class="layers">Layers: Starry sky → purple mountains → dark pines → glowing snow → snowflakes → frosted UI</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#0B0033"></div>
+        <div class="swatch" style="background:#2d1b69"></div>
+        <div class="swatch" style="background:#7B68EE"></div>
+        <div class="swatch" style="background:#C8B8E8"></div>
+        <div class="swatch" style="background:#F0E8FF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B: Skyblue Arctic -->
+  <div class="card" onclick="select(this,'b')">
+    <div class="scene">
+      <svg viewBox="0 0 400 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4A90D9"/>
+            <stop offset="40%" stop-color="#87CEEB"/>
+            <stop offset="80%" stop-color="#B5D8F0"/>
+            <stop offset="100%" stop-color="#D4EAFF"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="380" fill="url(#skyB)"/>
+
+        <!-- Sun -->
+        <circle cx="320" cy="40" r="20" fill="#FFF9C4" opacity="0.9"/>
+        <circle cx="320" cy="40" r="30" fill="#FFEE58" opacity="0.15"/>
+
+        <!-- Clouds -->
+        <ellipse cx="80" cy="35" rx="40" ry="14" fill="rgba(255,255,255,0.7)"/>
+        <ellipse cx="95" cy="25" rx="22" ry="10" fill="rgba(255,255,255,0.7)"/>
+        <ellipse cx="280" cy="55" rx="30" ry="11" fill="rgba(255,255,255,0.5)"/>
+
+        <!-- Mountains -->
+        <polygon points="0,280 80,175 160,280" fill="#9EC5E0" opacity="0.6"/>
+        <polygon points="100,280 210,155 320,280" fill="#8BB8D8" opacity="0.5"/>
+        <polygon points="260,280 360,185 460,280" fill="#9EC5E0" opacity="0.6"/>
+        <!-- Snow caps -->
+        <polygon points="195,155 210,155 225,175" fill="white" opacity="0.7"/>
+        <polygon points="70,185 80,175 90,185" fill="white" opacity="0.6"/>
+
+        <!-- Trees (green with snow) -->
+        <polygon points="15,280 30,218 45,280" fill="#2E7D32"/>
+        <polygon points="22,232 30,218 38,232" fill="white" opacity="0.5"/>
+        <polygon points="55,280 68,235 81,280" fill="#388E3C"/>
+        <polygon points="330,280 348,208 366,280" fill="#2E7D32"/>
+        <polygon points="338,225 348,208 358,225" fill="white" opacity="0.5"/>
+        <polygon points="370,280 382,240 394,280" fill="#388E3C"/>
+        <polygon points="150,280 160,245 170,280" fill="#2E7D32"/>
+
+        <!-- Snow ground -->
+        <ellipse cx="200" cy="335" rx="250" ry="75" fill="#F5FAFF"/>
+        <ellipse cx="200" cy="340" rx="250" ry="70" fill="white"/>
+
+        <!-- Snowman -->
+        <circle cx="35" cy="285" r="12" fill="white" stroke="#B0BEC5" stroke-width="1"/>
+        <circle cx="35" cy="270" r="8" fill="white" stroke="#B0BEC5" stroke-width="1"/>
+        <circle cx="33" cy="268" r="1.5" fill="#333"/>
+        <circle cx="37" cy="268" r="1.5" fill="#333"/>
+        <line x1="35" y1="272" x2="35" y2="273" stroke="#FF6D00" stroke-width="2"/>
+
+        <!-- Snowflakes -->
+        <text x="50" y="110" fill="rgba(255,255,255,0.7)" font-size="10">❄</text>
+        <text x="200" y="140" fill="rgba(255,255,255,0.5)" font-size="8">❄</text>
+        <text x="310" y="100" fill="rgba(255,255,255,0.8)" font-size="12">❄</text>
+        <text x="120" y="170" fill="rgba(255,255,255,0.4)" font-size="9">❄</text>
+
+        <!-- UI Panel -->
+        <rect x="80" y="80" width="240" height="180" rx="16" fill="white" stroke="#42A5F5" stroke-width="2.5" opacity="0.95"/>
+
+        <text x="200" y="110" text-anchor="middle" fill="#0D47A1" font-size="15" font-weight="bold">What's your name, runner?</text>
+
+        <rect x="110" y="120" width="180" height="32" rx="10" fill="#F0F8FF" stroke="#42A5F5" stroke-width="1.5"/>
+        <text x="200" y="141" text-anchor="middle" fill="#0D47A1" font-size="14" font-weight="bold">BRIAN</text>
+
+        <text x="200" y="172" text-anchor="middle" fill="#1565C0" font-size="11">Pick your avatar</text>
+
+        <rect x="108" y="180" width="40" height="40" rx="10" fill="#FF8A65" stroke="white" stroke-width="2"/>
+        <text x="128" y="205" text-anchor="middle" font-size="18">🦊</text>
+        <rect x="158" y="180" width="40" height="40" rx="10" fill="#81C784" stroke="white" stroke-width="2"/>
+        <text x="178" y="205" text-anchor="middle" font-size="18">🐸</text>
+        <rect x="208" y="180" width="40" height="40" rx="10" fill="#90A4AE" stroke="white" stroke-width="2"/>
+        <text x="228" y="205" text-anchor="middle" font-size="18">🐶</text>
+        <rect x="258" y="180" width="40" height="40" rx="10" fill="#F48FB1" stroke="#FFD700" stroke-width="2"/>
+        <text x="278" y="205" text-anchor="middle" font-size="18">🐷</text>
+
+        <rect x="145" y="232" width="110" height="34" rx="17" fill="#1E88E5"/>
+        <text x="200" y="254" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Continue ▸</text>
+      </svg>
+    </div>
+    <div class="info">
+      <h3>B) Skyblue Arctic Day ☀️</h3>
+      <p>Bright, adventurous, energetic. Like a Saturday morning cartoon.</p>
+      <div class="layers">Layers: Blue sky + clouds + sun → snowy mountains → green pines → white snow + snowman → snowflakes → crisp UI</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#0D47A1"></div>
+        <div class="swatch" style="background:#42A5F5"></div>
+        <div class="swatch" style="background:#87CEEB"></div>
+        <div class="swatch" style="background:#E8F4FD"></div>
+        <div class="swatch" style="background:#FFFFFF; border-color:#ccc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C: Warm Sunset -->
+  <div class="card" onclick="select(this,'c')">
+    <div class="scene">
+      <svg viewBox="0 0 400 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E65100"/>
+            <stop offset="25%" stop-color="#FF8F00"/>
+            <stop offset="55%" stop-color="#FFB74D"/>
+            <stop offset="85%" stop-color="#FFE0B2"/>
+            <stop offset="100%" stop-color="#FFF3E0"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="380" fill="url(#skyC)"/>
+
+        <!-- Sunset glow -->
+        <ellipse cx="200" cy="15" rx="80" ry="25" fill="#FFEE58" opacity="0.3"/>
+
+        <!-- Warm clouds -->
+        <ellipse cx="70" cy="40" rx="35" ry="12" fill="rgba(255,255,255,0.4)"/>
+        <ellipse cx="300" cy="50" rx="28" ry="10" fill="rgba(255,255,255,0.3)"/>
+
+        <!-- Hills -->
+        <polygon points="0,280 100,200 200,280" fill="#E8A860" opacity="0.5"/>
+        <polygon points="180,280 300,190 420,280" fill="#D4964A" opacity="0.4"/>
+
+        <!-- Trees (warm tones) -->
+        <polygon points="15,280 30,225 45,280" fill="#8D6E3A"/>
+        <polygon points="55,280 68,240 81,280" fill="#A0794A"/>
+        <polygon points="330,280 348,215 366,280" fill="#7A5A2E"/>
+        <polygon points="375,280 385,245 395,280" fill="#8D6E3A"/>
+
+        <!-- Cabin -->
+        <rect x="10" y="265" width="30" height="20" fill="#8D6E3A" rx="2"/>
+        <polygon points="5,265 25,250 45,265" fill="#7A5A2E"/>
+        <rect x="20" y="270" width="6" height="8" fill="#FFD54F" opacity="0.7"/>
+
+        <!-- Snow ground (warm) -->
+        <ellipse cx="200" cy="335" rx="250" ry="75" fill="#FFE8CC"/>
+        <ellipse cx="200" cy="340" rx="250" ry="70" fill="#FFF3E0"/>
+
+        <!-- Sparkles -->
+        <text x="60" y="100" fill="rgba(255,255,255,0.5)" font-size="10">✨</text>
+        <text x="230" y="130" fill="rgba(255,255,255,0.4)" font-size="8">✨</text>
+        <text x="160" y="170" fill="rgba(255,255,255,0.3)" font-size="12">✨</text>
+
+        <!-- UI Panel -->
+        <rect x="80" y="80" width="240" height="180" rx="16" fill="#FFFAF0" stroke="#E65100" stroke-width="2.5" opacity="0.95"/>
+
+        <text x="200" y="110" text-anchor="middle" fill="#BF360C" font-size="15" font-weight="bold">What's your name, runner?</text>
+
+        <rect x="110" y="120" width="180" height="32" rx="10" fill="#FFF8E1" stroke="#E65100" stroke-width="1.5"/>
+        <text x="200" y="141" text-anchor="middle" fill="#BF360C" font-size="14" font-weight="bold">BRIAN</text>
+
+        <text x="200" y="172" text-anchor="middle" fill="#E65100" font-size="11">Pick your avatar</text>
+
+        <rect x="108" y="180" width="40" height="40" rx="10" fill="#FF8A65" stroke="#FFFAF0" stroke-width="2"/>
+        <text x="128" y="205" text-anchor="middle" font-size="18">🦊</text>
+        <rect x="158" y="180" width="40" height="40" rx="10" fill="#81C784" stroke="#FFFAF0" stroke-width="2"/>
+        <text x="178" y="205" text-anchor="middle" font-size="18">🐸</text>
+        <rect x="208" y="180" width="40" height="40" rx="10" fill="#90A4AE" stroke="#FFFAF0" stroke-width="2"/>
+        <text x="228" y="205" text-anchor="middle" font-size="18">🐶</text>
+        <rect x="258" y="180" width="40" height="40" rx="10" fill="#F48FB1" stroke="#FFD700" stroke-width="2"/>
+        <text x="278" y="205" text-anchor="middle" font-size="18">🐷</text>
+
+        <rect x="145" y="232" width="110" height="34" rx="17" fill="#E65100"/>
+        <text x="200" y="254" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Continue ▸</text>
+      </svg>
+    </div>
+    <div class="info">
+      <h3>C) Warm & Cozy Sunset 🔥</h3>
+      <p>Cozy, friendly, inviting. Like hot cocoa by the fireplace.</p>
+      <div class="layers">Layers: Golden sunset → warm hills → autumn trees → cabin → cream snow → sparkles → warm UI</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#BF360C"></div>
+        <div class="swatch" style="background:#E65100"></div>
+        <div class="swatch" style="background:#FF9800"></div>
+        <div class="swatch" style="background:#FFE0B2"></div>
+        <div class="swatch" style="background:#FFFAF0; border-color:#ddd"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- D: Colorful -->
+  <div class="card" onclick="select(this,'d')">
+    <div class="scene">
+      <svg viewBox="0 0 400 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyD" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7B68EE"/>
+            <stop offset="30%" stop-color="#4FC3F7"/>
+            <stop offset="60%" stop-color="#81C784"/>
+            <stop offset="80%" stop-color="#FFD54F"/>
+            <stop offset="100%" stop-color="#FF8A65"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="380" fill="url(#skyD)"/>
+
+        <!-- Floating shapes -->
+        <circle cx="50" cy="30" r="8" fill="#FF8A65" opacity="0.4"/>
+        <rect x="300" y="25" width="12" height="12" rx="2" fill="#81C784" opacity="0.4" transform="rotate(45 306 31)"/>
+        <circle cx="150" cy="50" r="6" fill="#FFD54F" opacity="0.35"/>
+        <rect x="230" y="20" width="10" height="10" rx="2" fill="#4FC3F7" opacity="0.35" transform="rotate(30 235 25)"/>
+        <circle cx="350" cy="55" r="5" fill="#CE93D8" opacity="0.3"/>
+
+        <!-- Rainbow mountains -->
+        <polygon points="0,280 90,195 180,280" fill="#CE93D8" opacity="0.4"/>
+        <polygon points="120,280 230,175 340,280" fill="#90CAF9" opacity="0.35"/>
+        <polygon points="260,280 370,200 480,280" fill="#A5D6A7" opacity="0.35"/>
+
+        <!-- Colorful trees -->
+        <polygon points="15,280 30,220 45,280" fill="#66BB6A"/>
+        <polygon points="60,280 72,238 84,280" fill="#4CAF50"/>
+        <polygon points="330,280 348,212 366,280" fill="#43A047"/>
+        <polygon points="375,280 385,242 395,280" fill="#66BB6A"/>
+
+        <!-- Snow ground (tinted) -->
+        <ellipse cx="200" cy="335" rx="250" ry="75" fill="#E8EAF6"/>
+        <ellipse cx="200" cy="340" rx="250" ry="70" fill="#F3E5F5" opacity="0.7"/>
+
+        <!-- Confetti particles -->
+        <circle cx="45" cy="100" r="3" fill="#FF8A65" opacity="0.6"/>
+        <polygon points="185,140 188,133 191,140" fill="#81C784" opacity="0.5"/>
+        <text x="300" y="110" fill="rgba(255,255,255,0.8)" font-size="12">❄</text>
+        <polygon points="108,170 111,165 114,170" fill="#FFD54F" opacity="0.5"/>
+        <circle cx="260" cy="190" r="3" fill="#4FC3F7" opacity="0.5"/>
+
+        <!-- UI Panel -->
+        <rect x="80" y="80" width="240" height="180" rx="16" fill="white" stroke="#7C4DFF" stroke-width="2.5" opacity="0.95"/>
+
+        <text x="200" y="110" text-anchor="middle" fill="#283593" font-size="15" font-weight="bold">What's your name, runner?</text>
+
+        <rect x="110" y="120" width="180" height="32" rx="10" fill="#F5F5FF" stroke="#7C4DFF" stroke-width="1.5"/>
+        <text x="200" y="141" text-anchor="middle" fill="#283593" font-size="14" font-weight="bold">BRIAN</text>
+
+        <text x="200" y="172" text-anchor="middle" fill="#5C6BC0" font-size="11">Pick your avatar</text>
+
+        <rect x="108" y="180" width="40" height="40" rx="10" fill="#FF8A65" stroke="white" stroke-width="2"/>
+        <text x="128" y="205" text-anchor="middle" font-size="18">🦊</text>
+        <rect x="158" y="180" width="40" height="40" rx="10" fill="#81C784" stroke="white" stroke-width="2"/>
+        <text x="178" y="205" text-anchor="middle" font-size="18">🐸</text>
+        <rect x="208" y="180" width="40" height="40" rx="10" fill="#90CAF9" stroke="white" stroke-width="2"/>
+        <text x="228" y="205" text-anchor="middle" font-size="18">🐶</text>
+        <rect x="258" y="180" width="40" height="40" rx="10" fill="#F48FB1" stroke="#FFD700" stroke-width="2"/>
+        <text x="278" y="205" text-anchor="middle" font-size="18">🐷</text>
+
+        <rect x="145" y="232" width="110" height="34" rx="17" fill="#7C4DFF"/>
+        <text x="200" y="254" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Continue ▸</text>
+      </svg>
+    </div>
+    <div class="info">
+      <h3>D) Colorful & Playful 🌈</h3>
+      <p>Energetic, fun, carnival-like. Maximum kid appeal.</p>
+      <div class="layers">Layers: Rainbow gradient → floating shapes → tinted mountains → green pines → lavender snow → confetti → vibrant UI</div>
+      <div class="swatches">
+        <div class="swatch" style="background:#7C4DFF"></div>
+        <div class="swatch" style="background:#4FC3F7"></div>
+        <div class="swatch" style="background:#81C784"></div>
+        <div class="swatch" style="background:#FFD54F"></div>
+        <div class="swatch" style="background:#FF8A65"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="pick-label" id="pick">Click a card above to select your theme</div>
+
+<script>
+function select(card, choice) {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  const names = {a:'Purple Winter Night',b:'Skyblue Arctic Day',c:'Warm & Cozy Sunset',d:'Colorful & Playful'};
+  document.getElementById('pick').innerHTML = '<strong>Selected: ' + names[choice] + '</strong> — tell me in the terminal!';
+
+  // Send event
+  if (window.__bsHelper) window.__bsHelper.sendEvent({type:'click', choice: choice, text: names[choice]});
+  fetch('/event', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({type:'click', choice:choice, text:names[choice]})}).catch(()=>{});
+}
+</script>
+
+</body>
+</html>
