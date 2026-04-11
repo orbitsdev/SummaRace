@@ -19,8 +19,8 @@ namespace SummaRace.UI
         [SerializeField] private AvatarButton[] _avatarButtons;
 
         [Header("Colors")]
-        [SerializeField] private Color _buttonActiveColor = new Color(0.149f, 0.129f, 0.361f);
-        [SerializeField] private Color _buttonDisabledColor = new Color(0.706f, 0.698f, 0.663f);
+        [SerializeField] private Color _buttonActiveColor = new Color(0.118f, 0.533f, 0.898f);   // #1E88E5
+        [SerializeField] private Color _buttonDisabledColor = new Color(0.690f, 0.745f, 0.773f); // #B0BEC5
 
         [Header("Validation")]
         [SerializeField] private int _maxNameLength = 15;
@@ -30,6 +30,7 @@ namespace SummaRace.UI
 
         private int _selectedAvatarIndex;
         private bool _isTransitioning;
+        private Coroutine _pulseCoroutine;
 
         void Start()
         {
@@ -116,10 +117,45 @@ namespace SummaRace.UI
                 _continueButtonBg.color = canContinue ? _buttonActiveColor : _buttonDisabledColor;
             if (_continueButton != null)
                 _continueButton.interactable = canContinue;
+
+            if (canContinue && _pulseCoroutine == null)
+                _pulseCoroutine = StartCoroutine(PulseButton());
+            else if (!canContinue && _pulseCoroutine != null)
+            {
+                StopCoroutine(_pulseCoroutine);
+                _pulseCoroutine = null;
+                if (_continueButton != null)
+                    _continueButton.transform.localScale = Vector3.one;
+            }
+        }
+
+        private IEnumerator PulseButton()
+        {
+            Transform btn = _continueButton.transform;
+            while (true)
+            {
+                float elapsed = 0f;
+                float duration = 1.5f;
+                while (elapsed < duration)
+                {
+                    elapsed += Time.deltaTime;
+                    float t = elapsed / duration;
+                    float scale = 1f + 0.04f * Mathf.Sin(t * Mathf.PI);
+                    btn.localScale = Vector3.one * scale;
+                    yield return null;
+                }
+                btn.localScale = Vector3.one;
+            }
         }
 
         private IEnumerator DoTransitionOut()
         {
+            if (_pulseCoroutine != null)
+            {
+                StopCoroutine(_pulseCoroutine);
+                _pulseCoroutine = null;
+            }
+
             if (_fadeOverlay != null)
             {
                 _fadeOverlay.blocksRaycasts = true;
