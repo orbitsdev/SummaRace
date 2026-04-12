@@ -12,6 +12,7 @@ namespace SummaRace.Core
         public static SceneLoader Instance { get; private set; }
         
         [Header("Scene Names")]
+        public const string SCENE_MAIN_MENU = "00_MainMenu";
         public const string SCENE_SPLASH = "00_Splash";
         public const string SCENE_NAME_ENTRY = "01_NameEntry";
         public const string SCENE_TEACHER_WELCOME = "02_TeacherWelcome";
@@ -43,6 +44,7 @@ namespace SummaRace.Core
         }
         
         // Quick load methods for each scene
+        public void LoadMainMenu() => LoadScene(SCENE_MAIN_MENU);
         public void LoadSplash() => LoadScene(SCENE_SPLASH);
         public void LoadNameEntry() => LoadScene(SCENE_NAME_ENTRY);
         public void LoadTeacherWelcome() => LoadScene(SCENE_TEACHER_WELCOME);
