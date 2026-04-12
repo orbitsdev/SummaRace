@@ -4,36 +4,50 @@ namespace SummaRace.UI
 {
     public class MenuCharacterRunner : MonoBehaviour
     {
-        [SerializeField] private Transform _centerPoint;
-        [SerializeField] private float _radius = 4f;
-        [SerializeField] private float _speed = 1.2f;
-        [SerializeField] private float _startAngle = 0f;
+        [SerializeField] private float _speed = 5f;
+        [SerializeField] private float _leftBound = -18f;
+        [SerializeField] private float _rightBound = 18f;
+        [SerializeField] private float _groundY = 0f;
+        [SerializeField] private float _zPosition = 5f;
+        [SerializeField] private bool _startMovingRight = true;
+        [SerializeField] private float _bobAmount = 0.1f;
+        [SerializeField] private float _bobSpeed = 10f;
 
-        private float _angle;
-        private Animator _animator;
+        private bool _movingRight;
 
         void Start()
         {
-            _angle = _startAngle * Mathf.Deg2Rad;
-            _animator = GetComponent<Animator>();
+            _movingRight = _startMovingRight;
+            FaceDirection();
         }
 
         void Update()
         {
-            _angle += _speed * Time.deltaTime;
+            float direction = _movingRight ? 1f : -1f;
+            float x = transform.position.x + direction * _speed * Time.deltaTime;
 
-            Vector3 center = _centerPoint != null ? _centerPoint.position : Vector3.zero;
-            float x = center.x + Mathf.Cos(_angle) * _radius;
-            float z = center.z + Mathf.Sin(_angle) * _radius;
+            // Bounce at bounds - turn around
+            if (x > _rightBound)
+            {
+                x = _rightBound;
+                _movingRight = false;
+                FaceDirection();
+            }
+            else if (x < _leftBound)
+            {
+                x = _leftBound;
+                _movingRight = true;
+                FaceDirection();
+            }
 
-            Vector3 newPos = new Vector3(x, center.y, z);
+            float bob = Mathf.Sin(Time.time * _bobSpeed) * _bobAmount;
+            transform.position = new Vector3(x, _groundY + bob, _zPosition);
+        }
 
-            // Face movement direction
-            Vector3 direction = newPos - transform.position;
-            if (direction.sqrMagnitude > 0.001f)
-                transform.rotation = Quaternion.LookRotation(direction);
-
-            transform.position = newPos;
+        private void FaceDirection()
+        {
+            float yRot = _movingRight ? 90f : -90f;
+            transform.rotation = Quaternion.Euler(0, yRot, 0);
         }
     }
 }
