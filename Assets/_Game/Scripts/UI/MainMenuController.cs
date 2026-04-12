@@ -41,6 +41,9 @@ namespace SummaRace.UI
 
             UpdateContinueButton();
 
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayMenuMusic();
+
             if (_fadeOverlay != null)
             {
                 _fadeOverlay.alpha = 1f;
