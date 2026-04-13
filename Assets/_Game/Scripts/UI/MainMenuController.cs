@@ -17,8 +17,17 @@ namespace SummaRace.UI
         [Header("UI")]
         [SerializeField] private CanvasGroup _fadeOverlay;
 
+        [Header("Progress Display")]
+        [SerializeField] private TMP_Text _progressText;
+
+        [Header("Version Display")]
+        [SerializeField] private TMP_Text _versionText;
+
         [Header("Settings Panel")]
         [SerializeField] private SettingsPanel _settingsPanel;
+
+        [Header("Character")]
+        [SerializeField] private MenuCharacterRunner _menuCharacter;
 
         [Header("Scene Transitions")]
         [SerializeField] private string _playScene = "01_NameEntry";
@@ -39,7 +48,17 @@ namespace SummaRace.UI
             if (_settingsButton != null)
                 _settingsButton.onClick.AddListener(HandleSettings);
 
+            // Subscribe to save deleted event
+            if (_settingsPanel != null)
+                _settingsPanel.OnSaveDeleted.AddListener(OnSaveDeleted);
+
             UpdateContinueButton();
+            UpdateProgressDisplay();
+            UpdateVersionDisplay();
+
+            // Trigger character greeting
+            if (_menuCharacter != null)
+                _menuCharacter.PlayGreeting();
 
             if (AudioManager.Instance != null)
                 AudioManager.Instance.PlayMenuMusic();
@@ -49,6 +68,48 @@ namespace SummaRace.UI
                 _fadeOverlay.alpha = 1f;
                 StartCoroutine(AnimateFade(1f, 0f, 0.5f));
             }
+        }
+
+        void OnDestroy()
+        {
+            if (_settingsPanel != null)
+                _settingsPanel.OnSaveDeleted.RemoveListener(OnSaveDeleted);
+        }
+
+        private void OnSaveDeleted()
+        {
+            UpdateContinueButton();
+            UpdateProgressDisplay();
+        }
+
+        private void UpdateProgressDisplay()
+        {
+            if (_progressText == null) return;
+
+            if (SaveManager.Instance == null || !SaveManager.Instance.HasSaveData())
+            {
+                _progressText.gameObject.SetActive(false);
+                return;
+            }
+
+            var progress = SaveManager.Instance.LoadProgress();
+
+            // Count completed levels (levels with at least 1 star)
+            int completedLevels = 0;
+            for (int i = 0; i < progress.starsPerLevel.Length; i++)
+            {
+                if (progress.starsPerLevel[i] > 0)
+                    completedLevels++;
+            }
+
+            _progressText.text = $"Level {completedLevels}/3 Complete";
+            _progressText.gameObject.SetActive(true);
+        }
+
+        private void UpdateVersionDisplay()
+        {
+            if (_versionText != null)
+                _versionText.text = $"v{Application.version}";
         }
 
         private void UpdateContinueButton()

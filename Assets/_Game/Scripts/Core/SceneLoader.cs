@@ -5,12 +5,12 @@ using System.Collections;
 namespace SummaRace.Core
 {
     /// <summary>
-    /// Handles scene transitions with optional fade effects
+    /// Handles scene transitions with optional fade effects and async loading
     /// </summary>
     public class SceneLoader : MonoBehaviour
     {
         public static SceneLoader Instance { get; private set; }
-        
+
         [Header("Scene Names")]
         public const string SCENE_MAIN_MENU = "00_MainMenu";
         public const string SCENE_SPLASH = "00_Splash";
@@ -23,12 +23,18 @@ namespace SummaRace.Core
         public const string SCENE_FINAL_SUMMARY = "07_FinalSummary";
         public const string SCENE_VICTORY = "08_Victory";
         public const string SCENE_GAME_COMPLETE = "99_GameComplete";
-        
+
         [Header("Transition Settings")]
         [SerializeField] private float _fadeDuration = 0.5f;
         [SerializeField] private CanvasGroup _fadeCanvasGroup;
-        
+
+        [Header("Loading Indicator")]
+        [SerializeField] private CanvasGroup _loadingIndicator;
+        [SerializeField] private RectTransform _loadingSpinner;
+        [SerializeField] private float _spinnerSpeed = 360f;
+
         private bool _isTransitioning;
+        private bool _showSpinner;
         
         void Awake()
         {
@@ -36,10 +42,26 @@ namespace SummaRace.Core
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+
+                // Hide loading indicator initially
+                if (_loadingIndicator != null)
+                {
+                    _loadingIndicator.alpha = 0f;
+                    _loadingIndicator.blocksRaycasts = false;
+                }
             }
             else
             {
                 Destroy(gameObject);
+            }
+        }
+
+        void Update()
+        {
+            // Spin the loading indicator
+            if (_showSpinner && _loadingSpinner != null)
+            {
+                _loadingSpinner.Rotate(0f, 0f, -_spinnerSpeed * Time.unscaledDeltaTime);
             }
         }
         
@@ -87,20 +109,56 @@ namespace SummaRace.Core
         private IEnumerator LoadSceneWithFade(string sceneName)
         {
             _isTransitioning = true;
-            
+
             // Fade out
             yield return StartCoroutine(Fade(1f));
-            
-            // Load scene
-            SceneManager.LoadScene(sceneName);
-            
+
+            // Show loading indicator
+            ShowLoadingIndicator();
+
+            // Load scene asynchronously
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+            asyncLoad.allowSceneActivation = false;
+
+            // Wait until scene is loaded (progress reaches 0.9)
+            while (asyncLoad.progress < 0.9f)
+            {
+                yield return null;
+            }
+
+            // Hide loading indicator
+            HideLoadingIndicator();
+
+            // Activate the scene
+            asyncLoad.allowSceneActivation = true;
+
             // Wait a frame for scene to initialize
             yield return null;
-            
+
             // Fade in
             yield return StartCoroutine(Fade(0f));
-            
+
             _isTransitioning = false;
+        }
+
+        private void ShowLoadingIndicator()
+        {
+            _showSpinner = true;
+            if (_loadingIndicator != null)
+            {
+                _loadingIndicator.alpha = 1f;
+                _loadingIndicator.blocksRaycasts = true;
+            }
+        }
+
+        private void HideLoadingIndicator()
+        {
+            _showSpinner = false;
+            if (_loadingIndicator != null)
+            {
+                _loadingIndicator.alpha = 0f;
+                _loadingIndicator.blocksRaycasts = false;
+            }
         }
         
         private IEnumerator Fade(float targetAlpha)

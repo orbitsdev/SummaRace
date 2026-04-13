@@ -28,11 +28,11 @@ namespace SummaRace.UI
         [SerializeField] private AudioClip _whooshSound;
 
         [Header("Timing")]
-        [SerializeField] private float _totalDuration = 20.0f;
+        [SerializeField] private float _totalDuration = 4.0f;
         [SerializeField] private float _fadeOutDuration = 0.5f;
 
         [Header("Next Scene")]
-        [SerializeField] private string _nextSceneName = "01_NameEntry";
+        [SerializeField] private string _nextSceneName = "00_MainMenu";
 
         private bool _skipRequested;
         private AsyncOperation _preloadOperation;

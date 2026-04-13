@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 using System.Collections;
 using SummaRace.Core;
@@ -19,13 +20,27 @@ namespace SummaRace.UI
         [Header("Narration")]
         [SerializeField] private Toggle _narrationToggle;
 
+        [Header("Delete Save")]
+        [SerializeField] private Button _deleteButton;
+        [SerializeField] private GameObject _confirmPanel;
+        [SerializeField] private Button _confirmYesButton;
+        [SerializeField] private Button _confirmNoButton;
+
         [Header("Quit")]
         [SerializeField] private Button _quitButton;
 
         [Header("Animation")]
         [SerializeField] private float _fadeDuration = 0.25f;
 
+        [Header("Audio Preview")]
+        [SerializeField] private float _previewDebounce = 0.15f;
+
+        [Header("Events")]
+        public UnityEvent OnSaveDeleted;
+
         private Coroutine _fadeCoroutine;
+        private float _lastMusicPreviewTime;
+        private float _lastSfxPreviewTime;
 
         void Awake()
         {
@@ -49,6 +64,19 @@ namespace SummaRace.UI
 
             if (_quitButton != null)
                 _quitButton.onClick.AddListener(HandleQuit);
+
+            // Delete save confirmation
+            if (_deleteButton != null)
+                _deleteButton.onClick.AddListener(ShowDeleteConfirmation);
+
+            if (_confirmYesButton != null)
+                _confirmYesButton.onClick.AddListener(HandleDeleteConfirmed);
+
+            if (_confirmNoButton != null)
+                _confirmNoButton.onClick.AddListener(HideDeleteConfirmation);
+
+            if (_confirmPanel != null)
+                _confirmPanel.SetActive(false);
         }
 
         private void HandleQuit()
@@ -101,12 +129,67 @@ namespace SummaRace.UI
         {
             if (AudioManager.Instance != null)
                 AudioManager.Instance.SetMusicVolume(value);
+
+            // Debounced audio preview
+            if (Time.unscaledTime - _lastMusicPreviewTime > _previewDebounce)
+            {
+                _lastMusicPreviewTime = Time.unscaledTime;
+                PlayPreviewSound();
+            }
         }
 
         private void OnSFXChanged(float value)
         {
             if (AudioManager.Instance != null)
                 AudioManager.Instance.SetSFXVolume(value);
+
+            // Debounced audio preview
+            if (Time.unscaledTime - _lastSfxPreviewTime > _previewDebounce)
+            {
+                _lastSfxPreviewTime = Time.unscaledTime;
+                PlayPreviewSound();
+            }
+        }
+
+        private void PlayPreviewSound()
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayButtonClick();
+        }
+
+        private void ShowDeleteConfirmation()
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayButtonClick();
+
+            if (_confirmPanel != null)
+                _confirmPanel.SetActive(true);
+        }
+
+        private void HideDeleteConfirmation()
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayButtonClick();
+
+            if (_confirmPanel != null)
+                _confirmPanel.SetActive(false);
+        }
+
+        private void HandleDeleteConfirmed()
+        {
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayButtonClick();
+
+            // Clear all save data
+            if (SaveManager.Instance != null)
+                SaveManager.Instance.ClearAllData();
+
+            HideDeleteConfirmation();
+
+            // Notify listeners (e.g., MainMenuController to hide Continue button)
+            OnSaveDeleted?.Invoke();
+
+            Debug.Log("[SettingsPanel] Save data deleted");
         }
 
         private void OnNarrationChanged(bool enabled)
