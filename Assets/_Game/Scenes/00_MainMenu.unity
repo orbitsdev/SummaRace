@@ -460,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1812072891626710266, guid: 257c304c754d3b247a51ef5bea7a90d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 1812072891626710266, guid: 257c304c754d3b247a51ef5bea7a90d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1812072891626710266, guid: 257c304c754d3b247a51ef5bea7a90d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.28
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1812072891626710266, guid: 257c304c754d3b247a51ef5bea7a90d0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummaRace.UI.MenuCharacterRunner
   _mode: 0
-  _speed: 4
+  _speed: 3.8
   _groundY: 0
   _bobAmount: 0.15
   _bobSpeed: 10
@@ -1648,9 +1648,9 @@ MonoBehaviour:
   _ovalRadiusZ: 2.5
   _startAngle: 0
   _clockwise: 1
-  _nearBound: -10
-  _farBound: 10
-  _fixedPosition: 6
+  _nearBound: -15
+  _farBound: 15
+  _fixedPosition: 1
   _startMovingForward: 1
   _animator: {fileID: 0}
   _greetingTrigger: Wave
@@ -2167,7 +2167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 47605742858639953, guid: 33e0229781589094db520ae4fecfde0f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.14
+      value: 6.7
       objectReference: {fileID: 0}
     - target: {fileID: 47605742858639953, guid: 33e0229781589094db520ae4fecfde0f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2175,7 +2175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 47605742858639953, guid: 33e0229781589094db520ae4fecfde0f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.81
+      value: -5.72
       objectReference: {fileID: 0}
     - target: {fileID: 47605742858639953, guid: 33e0229781589094db520ae4fecfde0f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2209,6 +2209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: snowman
       objectReference: {fileID: 0}
+    - target: {fileID: 5124194119190068834, guid: 33e0229781589094db520ae4fecfde0f, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1616564988}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3369,7 +3373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807431114919716905, guid: dcc982307a817354fafb192abcd9b917, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 7807431114919716905, guid: dcc982307a817354fafb192abcd9b917, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3377,7 +3381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7807431114919716905, guid: dcc982307a817354fafb192abcd9b917, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7807431114919716905, guid: dcc982307a817354fafb192abcd9b917, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4075,7 +4079,7 @@ Transform:
   m_GameObject: {fileID: 1282250890}
   serializedVersion: 2
   m_LocalRotation: {x: 0.043619387, y: 0, z: 0, w: 0.99904823}
-  m_LocalPosition: {x: 0, y: 3, z: -8}
+  m_LocalPosition: {x: 0, y: 3.16, z: -9.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4543,7 +4547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummaRace.UI.MenuCharacterRunner
   _mode: 0
-  _speed: 4
+  _speed: 4.5
   _groundY: 0
   _bobAmount: 0.15
   _bobSpeed: 8
@@ -4552,9 +4556,9 @@ MonoBehaviour:
   _ovalRadiusZ: 2.5
   _startAngle: 0
   _clockwise: 1
-  _nearBound: -10
-  _farBound: 10
-  _fixedPosition: 4
+  _nearBound: -15
+  _farBound: 15
+  _fixedPosition: 0
   _startMovingForward: 1
   _animator: {fileID: 0}
   _greetingTrigger: Wave
@@ -5767,6 +5771,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4245742057788185764, guid: 955b11bbd33551d48b91225b08a492c9, type: 3}
   m_PrefabInstance: {fileID: 1605211689}
   m_PrefabAsset: {fileID: 0}
+--- !u!134 &1616564988
+PhysicsMaterial:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 2
+  m_DynamicFriction: 0.6
+  m_StaticFriction: 0.6
+  m_Bounciness: 0
+  m_FrictionCombine: 0
+  m_BounceCombine: 0
 --- !u!1 &1617237882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6457,7 +6474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: 10.32
       objectReference: {fileID: 0}
     - target: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6465,7 +6482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8855052669661678444, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6999,7 +7016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SummaRace.UI.MenuCharacterRunner
   _mode: 0
-  _speed: 4
+  _speed: 4.2
   _groundY: 0
   _bobAmount: 0.15
   _bobSpeed: 8
@@ -7008,9 +7025,9 @@ MonoBehaviour:
   _ovalRadiusZ: 2.5
   _startAngle: 180
   _clockwise: 1
-  _nearBound: -10
-  _farBound: 10
-  _fixedPosition: 5
+  _nearBound: -15
+  _farBound: 15
+  _fixedPosition: 0.5
   _startMovingForward: 1
   _animator: {fileID: 0}
   _greetingTrigger: Wave
