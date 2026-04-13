@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 388e86f7a0a1a6649987ba6670bc1265
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 336652
+  packageName: proTools - Scene Switcher
+  packageVersion: 1.0
+  assetPath: Assets/proTools/proSceneSwitcher/Editor/proSceneSwitcher.cs
+  uploadId: 796488
